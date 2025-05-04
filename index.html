@@ -42,7 +42,10 @@
       margin-bottom: 1em;
     }
     .section-title.news {
-      border-bottom: 3px solid black;
+      background: #d0efff;
+      display: inline-block;
+      padding: 0.3em 1em;
+      border-radius: 4px;
     }
     .section-title.unit {
       border-bottom: 3px dashed #66a6ff;
@@ -65,37 +68,38 @@
     }
 
     .news-box {
-      border-left: 6px solid #f08080;
       background: #fff5f5;
       padding: 1em;
       margin: 1em 0;
-      position: relative;
+      text-align: center;
     }
     .news-box::before {
       content: "NEWS";
-      position: absolute;
-      top: -0.8em;
-      left: 0.8em;
+      display: inline-block;
       background: #f08080;
       color: white;
       font-size: 0.75em;
       font-weight: bold;
       padding: 0.2em 0.6em;
       border-radius: 4px;
+      margin-bottom: 0.5em;
     }
     .products-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 1em;
       margin-top: 1em;
+      justify-content: center;
     }
     .card {
       background: #f3faff;
       border-radius: 10px;
       padding: 1em;
-      flex: 1 1 calc(50% - 0.5em);
+      width: 45%;
+      max-width: 300px;
       box-shadow: 0 1px 4px rgba(0,0,0,0.05);
       position: relative;
+      text-align: center;
     }
     .card .image {
       background: #ccc;
@@ -131,7 +135,7 @@
     }
     @media (max-width: 600px) {
       .card {
-        flex: 1 1 100%;
+        width: 100%;
       }
     }
   </style>
@@ -145,24 +149,28 @@
   <section>
     <h2 class="section-title news">ニュース</h2>
     <div class="news-box">
-      5月3日、5月4日 サッポロモノヴィレッジ出展 → 無事終了いたしました！たくさんのご来場ありがとうございました！
+      無事終了いたしました。<br>
+      たくさんのご来場ありがとうございました！
     </div>
   </section>
 
   <section>
     <h2 class="section-title unit">ユニット紹介</h2>
-    <p>
-      nazoooは2024年に結成した謎解きユニットです。<br>
-      大人もこどももおねーさんも楽しめる謎解きを、会社員の傍らゆるっと作っています。<br><br>
-      子ども向けのイラストやギミックいっぱいの謎や、
-      おとな向けの小説を模した文章のみの謎など、多種多様な作品にチャレンジ中です。<br><br>
-      まだまだ駆け出しで至らぬところもございますが、お楽しみいただけましたら幸いです。
+    <p style="text-align:center">
+      nazoooは2024年に結成した謎解きユニットです。<br><br>
+      大人もこどももおねーさんも楽しめる謎解きを<br>
+      会社員の傍らゆるっと作っています。<br><br>
+      子ども向けの、イラストいっぱいの謎。<br>
+      おとな向けの小説を模した文章のみの謎。<br>
+      多種多様な作品にチャレンジ中です。<br><br>
+      駆け出しで至らぬところもございますが<br>
+      お楽しみいただけましたら幸いです。
     </p>
   </section>
 
   <section>
     <h2 class="section-title products">商品一覧</h2>
-    <p>いずれも通販にてご対応可能です。（送料別）<br>
+    <p style="text-align:center">いずれも通販にてご対応可能です。（送料別）<br>
     お申込みは <a href="https://x.com/nazooo2024" target="_blank">X（@nazooo2024）</a> までお願いいたします。</p>
     <div class="products-grid">
       <div class="card">
@@ -172,16 +180,19 @@
         価格：500円
       </div>
       <div class="card">
+        <div class="badge">NEW</div>
         <div class="image"></div>
         <strong>夏の謎</strong><br>
         価格：500円
       </div>
       <div class="card">
+        <div class="badge">NEW</div>
         <div class="image"></div>
         <strong>秋の謎</strong><br>
         価格：600円
       </div>
       <div class="card">
+        <div class="badge">NEW</div>
         <div class="image"></div>
         <strong>冬の謎</strong><br>
         価格：500円
@@ -191,16 +202,16 @@
 
   <section>
     <h2 class="section-title history">出展活動歴</h2>
-    <p>2024年5月：サッポロモノヴィレッジ出展</p>
+    <p style="text-align:center">2024年5月：サッポロモノヴィレッジ出展</p>
   </section>
 
   <section>
     <h2 class="section-title sns">SNS</h2>
     <div class="sns-links">
-      <a href="https://x.com/nazooo2024" target="_blank"><i class="fab fa-x-twitter"></i>X（@nazooo2024）</a>
+      <a href="https://x.com/nazooo2024" target="_blank"><i class="fab fa-x-twitter"></i>@nazooo2024</a>
       <a href="https://www.instagram.com/nazooo_2024?igsh=MWU1NHp5NndjeGVmdw==" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
     </div>
-    <p style="margin-top: 1em; text-align:center">お申込みやお問い合わせはXまで頂けますと幸いです。</p>
+    <p style="margin-top: 1em; text-align:center">お問い合わせは<br>各SNSのDMにてお願いいたします。</p>
   </section>
 </body>
 </html>
