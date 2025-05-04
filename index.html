@@ -35,13 +35,39 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
-    .section-title {
-      font-size: 1.3em;
-      font-weight: bold;
-      margin-bottom: 1em;
-      padding-left: 0.5em;
-      border-left: 5px solid #66a6ff;
+    /* 見出しデザインA：黒の下線 */
+    .section-title.news {
+      border-bottom: 3px solid black;
+      display: inline-block;
     }
+    /* 見出しデザインB：点線下線 */
+    .section-title.unit {
+      border-bottom: 3px dashed #66a6ff;
+      display: inline-block;
+      color: #66a6ff;
+    }
+    /* 見出しデザインC：二重線下線 */
+    .section-title.products {
+      border-bottom: double 5px #00aaff;
+      display: inline-block;
+      color: #00aaff;
+    }
+    /* 見出しデザインD：上下線 */
+    .section-title.history {
+      border-top: 3px solid #00aaff;
+      border-bottom: 3px solid #00aaff;
+      padding: 0.3em 0;
+      color: #00aaff;
+      display: inline-block;
+    }
+    /* 見出しデザインE：背景色ボックス */
+    .section-title.sns {
+      background: #d0efff;
+      display: inline-block;
+      padding: 0.3em 1em;
+      border-radius: 4px;
+    }
+
     .news-box {
       border-left: 6px solid #f08080;
       background: #fff5f5;
@@ -120,14 +146,14 @@
   </header>
 
   <section>
-    <h2 class="section-title">ニュース</h2>
+    <h2 class="section-title news">ニュース</h2>
     <div class="news-box">
       5月3日、5月4日 サッポロモノヴィレッジ出展 → 無事終了いたしました！たくさんのご来場ありがとうございました！
     </div>
   </section>
 
   <section>
-    <h2 class="section-title">ユニット紹介</h2>
+    <h2 class="section-title unit">ユニット紹介</h2>
     <p>
       nazoooは2024年に結成した謎解きユニットです。<br>
       大人もこどももおねーさんも楽しめる謎解きを、会社員の傍らゆるっと作っています。<br><br>
@@ -138,7 +164,7 @@
   </section>
 
   <section>
-    <h2 class="section-title">商品一覧</h2>
+    <h2 class="section-title products">商品一覧</h2>
     <p>いずれも通販にてご対応可能です。（送料別）<br>
     お申込みは <a href="https://x.com/nazooo2024" target="_blank">X（@nazooo2024）</a> までお願いいたします。</p>
     <div class="products-grid">
@@ -167,12 +193,12 @@
   </section>
 
   <section>
-    <h2 class="section-title">出展活動歴</h2>
+    <h2 class="section-title history">出展活動歴</h2>
     <p>2024年5月：サッポロモノヴィレッジ出展</p>
   </section>
 
   <section>
-    <h2 class="section-title">SNS</h2>
+    <h2 class="section-title sns">SNS</h2>
     <div class="sns-links">
       <a href="https://x.com/nazooo2024" target="_blank"><i class="fab fa-x-twitter"></i>X（@nazooo2024）</a>
       <a href="https://www.instagram.com/nazooo_2024?igsh=MWU1NHp5NndjeGVmdw==" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
