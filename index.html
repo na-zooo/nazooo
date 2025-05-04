@@ -35,75 +35,38 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
+
     h2.section-title {
-      text-align: center;
-      width: 100%;
-      padding-bottom: 0.3em;
-      margin-bottom: 1em;
-    }
-    .section-title.news {
       background: #d0efff;
+      padding: 0.6em 1.5em;
       display: inline-block;
-      padding: 0.5em 2em;
-      border-radius: 6px;
-    }
-    .section-title.unit,
-    .section-title.products,
-    .section-title.history,
-    .section-title.sns {
+      margin: 0 auto 1em;
+      border-radius: 8px;
       text-align: center;
-      width: 100%;
-      margin-bottom: 1em;
+      font-size: 1.4em;
     }
-    .section-title.unit {
-      border-bottom: 3px dashed #66a6ff;
-      color: #66a6ff;
-    }
-    .section-title.products {
-      border-bottom: double 5px #00aaff;
-      color: #00aaff;
-    }
-    .section-title.history {
-      border-top: 3px solid #00aaff;
-      border-bottom: 3px solid #00aaff;
-      color: #00aaff;
-    }
-    .section-title.sns {
-      background: #d0efff;
-      display: inline-block;
-      padding: 0.3em 1em;
-      border-radius: 4px;
-    }
+
     .news-box {
       background: #fff5f5;
-      padding: 1.5em;
+      padding: 1.5em 1em;
+      margin: 1em auto;
+      border-radius: 6px;
       text-align: center;
-      position: relative;
+      line-height: 1.8;
     }
-    .news-box::before {
-      content: "NEWS";
-      position: absolute;
-      top: -0.8em;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #f08080;
-      color: white;
-      font-size: 0.75em;
-      font-weight: bold;
-      padding: 0.2em 0.6em;
-      border-radius: 4px;
-    }
+
     .products-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 1em;
       margin-top: 1em;
+      justify-content: center;
     }
     .card {
       background: #f3faff;
       border-radius: 10px;
       padding: 1em;
-      flex: 1 1 calc(50% - 0.5em);
+      flex: 1 1 calc(45% - 0.5em);
       box-shadow: 0 1px 4px rgba(0,0,0,0.05);
       position: relative;
       text-align: center;
@@ -140,6 +103,7 @@
       text-decoration: none;
       font-size: 0.9em;
     }
+
     @media (max-width: 600px) {
       .card {
         flex: 1 1 100%;
@@ -154,17 +118,19 @@
   </header>
 
   <section>
-    <h2 class="section-title news">NEWS</h2>
+    <h2 class="section-title">NEWS</h2>
     <div class="news-box">
+      5月3日＆4日 サッポロモノヴィレッジ出展<br>
+      ↓<br>
       無事終了いたしました。<br>
       たくさんのご来場ありがとうございました！
     </div>
   </section>
 
   <section>
-    <h2 class="section-title unit">nazooo</h2>
-    <p style="text-align:center">
-      nazoooは2024年に結成した謎解きユニットです。<br><br>
+    <h2 class="section-title">nazooo</h2>
+    <p style="text-align:center;">
+      nazoooは2024年に結成した謎解きユニットです。<br>
       大人もこどももおねーさんも楽しめる謎解きを<br>
       会社員の傍らゆるっと作っています。<br><br>
       子ども向けの、イラストいっぱいの謎。<br>
@@ -176,49 +142,50 @@
   </section>
 
   <section>
-    <h2 class="section-title products">LINE UP</h2>
-    <p style="text-align:center">いずれも通販にてご対応可能です。（送料別）<br>
-    お申込みは <a href="https://x.com/nazooo2024" target="_blank">@nazooo2024</a><br>までお願いいたします。</p>
+    <h2 class="section-title">LINE UP</h2>
+    <p style="text-align:center;">
+      いずれも通販にてご対応可能です。（送料別）<br>
+      お申込みは <a href="https://x.com/nazooo2024" target="_blank">@nazooo2024</a><br>までお願いいたします。
+    </p>
     <div class="products-grid">
       <div class="card">
         <div class="badge">NEW</div>
         <div class="image"></div>
-        <strong>春の謎</strong><br>
-        価格：500円
+        <strong>春の謎</strong><br>価格：500円
       </div>
       <div class="card">
         <div class="badge">NEW</div>
         <div class="image"></div>
-        <strong>夏の謎</strong><br>
-        価格：500円
+        <strong>夏の謎</strong><br>価格：500円
       </div>
       <div class="card">
         <div class="badge">NEW</div>
         <div class="image"></div>
-        <strong>秋の謎</strong><br>
-        価格：600円
+        <strong>秋の謎</strong><br>価格：600円
       </div>
       <div class="card">
         <div class="badge">NEW</div>
         <div class="image"></div>
-        <strong>冬の謎</strong><br>
-        価格：500円
+        <strong>冬の謎</strong><br>価格：500円
       </div>
     </div>
   </section>
 
   <section>
-    <h2 class="section-title history">HISTORY</h2>
-    <p style="text-align:center">2024年5月：サッポロモノヴィレッジ出展</p>
+    <h2 class="section-title">HISTORY</h2>
+    <p style="text-align:center;">2024年5月：サッポロモノヴィレッジ出展</p>
   </section>
 
   <section>
-    <h2 class="section-title sns">SNS</h2>
+    <h2 class="section-title">SNS</h2>
     <div class="sns-links">
-      <a href="https://x.com/nazooo2024" target="_blank"><i class="fab fa-x-twitter"></i>@nazooo2024</a>
+      <a href="https://x.com/nazooo2024" target="_blank"><i class="fab fa-x-twitter"></i></a>
       <a href="https://www.instagram.com/nazooo_2024?igsh=MWU1NHp5NndjeGVmdw==" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
     </div>
-    <p style="margin-top: 1em; text-align:center">お問い合わせや通販お申込みは<br>Xまで頂けますと幸いです。</p>
+    <p style="margin-top: 1em; text-align:center;">
+      お問い合わせや通販お申込みは<br>
+      X（@nazooo2024）までお願いいたします。
+    </p>
   </section>
 </body>
 </html>
