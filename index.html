@@ -5,59 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>nazooo｜なぞ、する？</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
       font-family: 'Noto Sans JP', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f6f5f3;
+      background-color: #fefefe;
       color: #333;
     }
     a { color: inherit; text-decoration: none; }
-    header, section {
-      padding: 2em 1.5em;
-    }
     header {
-      background-color: #e0dcd5;
+      background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
       text-align: center;
+      padding: 2.5em 1.5em 2em;
+      color: #fff;
     }
     header h1 {
       margin: 0;
-      font-size: 2em;
-      font-weight: bold;
+      font-size: 2.5em;
+      font-weight: 700;
     }
     header p {
-      margin-top: 0.5em;
-      font-size: 1.1em;
+      font-size: 1.2em;
+      margin-top: 0.3em;
+    }
+    section {
+      margin: 2em 1.5em;
+      background-color: #fff;
+      border-radius: 14px;
+      padding: 1.5em;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
     section h2 {
-      font-size: 1.3em;
-      margin-bottom: 0.5em;
-      border-left: 5px solid #b5cbd6;
+      font-size: 1.4em;
+      color: #444;
+      border-left: 6px solid #ffa07a;
       padding-left: 0.5em;
+      margin-top: 0;
     }
-    .news, .about, .features, .events, .sns {
-      background-color: #ffffff;
-      margin-bottom: 1.5em;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    .products {
+    .products-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 1em;
     }
     .card {
       flex: 1 1 calc(50% - 0.5em);
-      background-color: #f0f8ff;
+      background-color: #fff8f0;
       border-radius: 12px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
       padding: 1em;
-      box-sizing: border-box;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
       position: relative;
     }
     .card:nth-child(even) {
-      background-color: #f9f3ef;
+      background-color: #e8f9ff;
     }
     .badge {
       position: absolute;
@@ -76,13 +77,22 @@
       border-radius: 8px;
       margin-bottom: 0.5em;
     }
+    .sns-links {
+      display: flex;
+      gap: 1em;
+      margin-top: 0.5em;
+    }
     .sns-links a {
-      display: inline-block;
-      margin-right: 1em;
-      background-color: #e0e0e0;
-      padding: 0.5em 1em;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      background-color: #f1f1f1;
+      padding: 0.6em 1em;
       border-radius: 8px;
-      font-size: 0.9em;
+      font-size: 0.95em;
+    }
+    .sns-links i {
+      font-size: 1.2em;
     }
     @media screen and (max-width: 600px) {
       .card {
@@ -97,29 +107,27 @@
     <p>なぞ、する？</p>
   </header>
 
-  <section class="news">
+  <section>
     <h2>ニュース</h2>
-    <p>5月3日、5月4日　サッポロモノヴィレッジ出展決定　→　無事終了いたしました。たくさんのご来場ありがとうございました！</p>
+    <p>5月3日、5月4日　サッポロモノヴィレッジ出展決定 → 無事終了いたしました。たくさんのご来場ありがとうございました！</p>
   </section>
 
-  <section class="about">
+  <section>
     <h2>ユニット紹介</h2>
-    <p>nazoooは2024年に結成した謎解きユニットです。大人もこどももおねーさんも楽しめる謎解きを、会社員の傍らゆるっと作っています。<br><br>子ども向けのイラストやギミックいっぱいの謎や、おとな向けの小説を模した文章のみの謎など、多種多様な作品にチャレンジ中です。<br><br>まだまだ駆け出しで至らぬところもございますが、お楽しみいただけましたら幸いです。</p>
+    <p>
+      nazoooは2024年に結成した謎解きユニットです。<br>
+      大人もこどももおねーさんも楽しめる謎解きを、会社員の傍らゆるっと作っています。<br><br>
+      子ども向けのイラストやギミックいっぱいの謎や、
+      おとな向けの小説を模した文章のみの謎など、多種多様な作品にチャレンジ中です。<br><br>
+      まだまだ駆け出しで至らぬところもございますが、お楽しみいただけましたら幸いです。
+    </p>
   </section>
 
-  <section class="features">
-    <h2>特徴</h2>
-    <ul>
-      <li>子ども〜大人まで幅広く楽しめる</li>
-      <li>論理・物語・デザインすべてにこだわり</li>
-      <li>おうちでじっくり取り組める小説型謎解き</li>
-    </ul>
-  </section>
-
-  <section class="products">
+  <section>
     <h2>商品一覧</h2>
-    <p>いずれも通販にてご対応可能です。（送料別）<br>お申し込みはXまでお願いいたします。</p>
-    <div class="products">
+    <p>いずれも通販にてご対応可能です。（送料別）<br>
+    お申込みは <a href="https://x.com/nazooo2024" target="_blank">X（@nazooo2024）</a> までお願いいたします。</p>
+    <div class="products-grid">
       <div class="card">
         <span class="badge">NEW</span>
         <div class="image-placeholder"></div>
@@ -144,18 +152,18 @@
     </div>
   </section>
 
-  <section class="events">
+  <section>
     <h2>出展活動歴</h2>
     <p>2024年5月：サッポロモノヴィレッジ出展</p>
   </section>
 
-  <section class="sns">
+  <section>
     <h2>SNS</h2>
     <div class="sns-links">
-      <a href="https://x.com/nazooo2024" target="_blank">X（旧Twitter）</a>
-      <a href="https://www.instagram.com/nazooo_2024?igsh=MWU1NHp5NndjeGVmdw==" target="_blank">Instagram</a>
+      <a href="https://x.com/nazooo2024" target="_blank"><i class="fab fa-x-twitter"></i>X（@nazooo2024）</a>
+      <a href="https://www.instagram.com/nazooo_2024?igsh=MWU1NHp5NndjeGVmdw==" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
     </div>
-    <p style="margin-top:1em;">お申込みやお問い合わせはXまで頂けますと幸いです。</p>
+    <p style="margin-top: 1em;">お申込みやお問い合わせはXまで頂けますと幸いです。</p>
   </section>
 </body>
 </html>
