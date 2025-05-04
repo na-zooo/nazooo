@@ -1,60 +1,116 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ナゾノベル公式サイト</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ナゾノベル</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f6f5f3;
+      color: #333;
+    }
+    header {
+      background-color: #e0dcd5;
+      padding: 1.5em;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #000;
+    }
+    header p {
+      margin-top: 0.5em;
+      font-size: 0.95em;
+      color: #555;
+    }
+    .container {
+      padding: 1.5em;
+    }
+    h2 {
+      font-size: 1.2em;
+      margin-bottom: 0.5em;
+      color: #444;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      justify-content: space-between;
+    }
+    .card {
+      flex: 1 1 calc(48% - 1em);
+      background-color: #e9f1f6;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      padding: 1em;
+      box-sizing: border-box;
+    }
+    .card:nth-child(even) {
+      background-color: #f3ebe1;
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 1em;
+      color: #222;
+    }
+    .price, .difficulty {
+      font-size: 0.9em;
+      margin-top: 0.3em;
+    }
+    .desc {
+      font-size: 0.85em;
+      margin-top: 0.5em;
+      color: #666;
+    }
+    @media screen and (max-width: 600px) {
+      .products {
+        flex-direction: column;
+      }
+      .card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>ナゾノベル</h1>
-        <p>“謎解きを小説に” をコンセプトにした謎解きユニットです。</p>
-    </header>
-
-    <main>
-        <section class="intro">
-            <h2>ユニット紹介</h2>
-            <p>2024年発足。言葉とロジックを駆使して、1枚の紙に広がる世界を作っています。</p>
-        </section>
-
-        <section class="event">
-            <h2>イベント出展予定</h2>
-            <p>直近の出展予定はXにて告知いたします。</p>
-        </section>
-
-        <section class="products">
-            <h2>商品一覧</h2>
-            <div class="product">
-                <img src="spring.jpg" alt="春の謎">
-                <h3>春の謎</h3>
-                <p>難易度：★★☆☆☆<br>価格：500円<br>小さな村の春祭りで起きた奇妙な事件を解き明かせ。</p>
-            </div>
-            <div class="product">
-                <img src="summer.jpg" alt="夏の謎">
-                <h3>夏の謎</h3>
-                <p>難易度：★★★☆☆<br>価格：500円<br>海辺で拾った手紙が、すべての始まりだった。</p>
-            </div>
-            <div class="product">
-                <img src="autumn.jpg" alt="秋の謎">
-                <h3>秋の謎</h3>
-                <p>難易度：★★★★☆<br>価格：500円<br>紅葉の山荘に集められた4人に隠された真実とは。</p>
-            </div>
-            <div class="product">
-                <img src="winter.jpg" alt="冬の謎">
-                <h3>冬の謎</h3>
-                <p>難易度：★★★☆☆<br>価格：500円<br>雪の夜、電話越しに聞こえた最後の声の意味は。</p>
-            </div>
-        </section>
-
-        <section class="contact">
-            <h2>お問い合わせ</h2>
-            <p>X（旧Twitter）：<a href="https://x.com/nazoans" target="_blank">@nazoans</a></p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 ナゾノベル</p>
-    </footer>
+  <header>
+    <h1>ナゾノベル</h1>
+    <p>“謎解きを小説に”をコンセプトにした謎解きユニットです。</p>
+  </header>
+  <div class="container">
+    <h2>商品一覧</h2>
+    <div class="products">
+      <div class="card">
+        <h3>春の謎</h3>
+        <div class="difficulty">難易度：★★☆☆☆</div>
+        <div class="price">価格：500円</div>
+        <div class="desc">小さな村の祭りで起きた奇妙な事件を解き明かせ。</div>
+      </div>
+      <div class="card">
+        <h3>夏の謎</h3>
+        <div class="difficulty">難易度：★★★☆☆</div>
+        <div class="price">価格：500円</div>
+        <div class="desc">海辺で拾った手紙が、すべての始まりだった。</div>
+      </div>
+      <div class="card">
+        <h3>秋の謎</h3>
+        <div class="difficulty">難易度：★★★★☆</div>
+        <div class="price">価格：600円</div>
+        <div class="desc">紅葉の館で語られる“消えた鍵”の真相とは。</div>
+      </div>
+      <div class="card">
+        <h3>冬の謎</h3>
+        <div class="difficulty">難易度：★★★☆☆</div>
+        <div class="price">価格：500円</div>
+        <div class="desc">雪に閉ざされた町で起きた未解決事件。</div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
