@@ -44,8 +44,16 @@
     .section-title.news {
       background: #d0efff;
       display: inline-block;
-      padding: 0.3em 1em;
-      border-radius: 4px;
+      padding: 0.5em 2em;
+      border-radius: 6px;
+    }
+    .section-title.unit,
+    .section-title.products,
+    .section-title.history,
+    .section-title.sns {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 1em;
     }
     .section-title.unit {
       border-bottom: 3px dashed #66a6ff;
@@ -66,37 +74,36 @@
       padding: 0.3em 1em;
       border-radius: 4px;
     }
-
     .news-box {
       background: #fff5f5;
-      padding: 1em;
-      margin: 1em 0;
+      padding: 1.5em;
       text-align: center;
+      position: relative;
     }
     .news-box::before {
       content: "NEWS";
-      display: inline-block;
+      position: absolute;
+      top: -0.8em;
+      left: 50%;
+      transform: translateX(-50%);
       background: #f08080;
       color: white;
       font-size: 0.75em;
       font-weight: bold;
       padding: 0.2em 0.6em;
       border-radius: 4px;
-      margin-bottom: 0.5em;
     }
     .products-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 1em;
       margin-top: 1em;
-      justify-content: center;
     }
     .card {
       background: #f3faff;
       border-radius: 10px;
       padding: 1em;
-      width: 45%;
-      max-width: 300px;
+      flex: 1 1 calc(50% - 0.5em);
       box-shadow: 0 1px 4px rgba(0,0,0,0.05);
       position: relative;
       text-align: center;
@@ -135,7 +142,7 @@
     }
     @media (max-width: 600px) {
       .card {
-        width: 100%;
+        flex: 1 1 100%;
       }
     }
   </style>
@@ -147,7 +154,7 @@
   </header>
 
   <section>
-    <h2 class="section-title news">ニュース</h2>
+    <h2 class="section-title news">NEWS</h2>
     <div class="news-box">
       無事終了いたしました。<br>
       たくさんのご来場ありがとうございました！
@@ -155,7 +162,7 @@
   </section>
 
   <section>
-    <h2 class="section-title unit">ユニット紹介</h2>
+    <h2 class="section-title unit">nazooo</h2>
     <p style="text-align:center">
       nazoooは2024年に結成した謎解きユニットです。<br><br>
       大人もこどももおねーさんも楽しめる謎解きを<br>
@@ -169,9 +176,9 @@
   </section>
 
   <section>
-    <h2 class="section-title products">商品一覧</h2>
+    <h2 class="section-title products">LINE UP</h2>
     <p style="text-align:center">いずれも通販にてご対応可能です。（送料別）<br>
-    お申込みは <a href="https://x.com/nazooo2024" target="_blank">X（@nazooo2024）</a> までお願いいたします。</p>
+    お申込みは <a href="https://x.com/nazooo2024" target="_blank">@nazooo2024</a><br>までお願いいたします。</p>
     <div class="products-grid">
       <div class="card">
         <div class="badge">NEW</div>
@@ -201,7 +208,7 @@
   </section>
 
   <section>
-    <h2 class="section-title history">出展活動歴</h2>
+    <h2 class="section-title history">HISTORY</h2>
     <p style="text-align:center">2024年5月：サッポロモノヴィレッジ出展</p>
   </section>
 
@@ -211,7 +218,7 @@
       <a href="https://x.com/nazooo2024" target="_blank"><i class="fab fa-x-twitter"></i>@nazooo2024</a>
       <a href="https://www.instagram.com/nazooo_2024?igsh=MWU1NHp5NndjeGVmdw==" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
     </div>
-    <p style="margin-top: 1em; text-align:center">お問い合わせは<br>各SNSのDMにてお願いいたします。</p>
+    <p style="margin-top: 1em; text-align:center">お問い合わせや通販お申込みは<br>Xまで頂けますと幸いです。</p>
   </section>
 </body>
 </html>
