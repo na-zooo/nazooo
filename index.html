@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ナゾノベル</title>
+  <title>nazooo｜なぞ、する？</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -13,65 +13,78 @@
       background-color: #f6f5f3;
       color: #333;
     }
+    a { color: inherit; text-decoration: none; }
+    header, section {
+      padding: 2em 1.5em;
+    }
     header {
       background-color: #e0dcd5;
-      padding: 1.5em;
       text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 1.8em;
+      font-size: 2em;
       font-weight: bold;
-      color: #000;
     }
     header p {
       margin-top: 0.5em;
-      font-size: 0.95em;
-      color: #555;
+      font-size: 1.1em;
     }
-    .container {
-      padding: 1.5em;
-    }
-    h2 {
-      font-size: 1.2em;
+    section h2 {
+      font-size: 1.3em;
       margin-bottom: 0.5em;
-      color: #444;
+      border-left: 5px solid #b5cbd6;
+      padding-left: 0.5em;
+    }
+    .news, .about, .features, .events, .sns {
+      background-color: #ffffff;
+      margin-bottom: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
     .products {
       display: flex;
       flex-wrap: wrap;
       gap: 1em;
-      justify-content: space-between;
     }
     .card {
-      flex: 1 1 calc(48% - 1em);
-      background-color: #e9f1f6;
+      flex: 1 1 calc(50% - 0.5em);
+      background-color: #f0f8ff;
       border-radius: 12px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
       padding: 1em;
       box-sizing: border-box;
+      position: relative;
     }
     .card:nth-child(even) {
-      background-color: #f3ebe1;
+      background-color: #f9f3ef;
     }
-    .card h3 {
-      margin-top: 0;
-      font-size: 1em;
-      color: #222;
+    .badge {
+      position: absolute;
+      top: 0.7em;
+      left: 0.7em;
+      background-color: #ff5c8a;
+      color: #fff;
+      font-size: 0.7em;
+      padding: 0.2em 0.5em;
+      border-radius: 6px;
     }
-    .price, .difficulty {
+    .image-placeholder {
+      width: 100%;
+      height: 120px;
+      background-color: #ddd;
+      border-radius: 8px;
+      margin-bottom: 0.5em;
+    }
+    .sns-links a {
+      display: inline-block;
+      margin-right: 1em;
+      background-color: #e0e0e0;
+      padding: 0.5em 1em;
+      border-radius: 8px;
       font-size: 0.9em;
-      margin-top: 0.3em;
-    }
-    .desc {
-      font-size: 0.85em;
-      margin-top: 0.5em;
-      color: #666;
     }
     @media screen and (max-width: 600px) {
-      .products {
-        flex-direction: column;
-      }
       .card {
         flex: 1 1 100%;
       }
@@ -80,37 +93,69 @@
 </head>
 <body>
   <header>
-    <h1>ナゾノベル</h1>
-    <p>“謎解きを小説に”をコンセプトにした謎解きユニットです。</p>
+    <h1>nazooo</h1>
+    <p>なぞ、する？</p>
   </header>
-  <div class="container">
+
+  <section class="news">
+    <h2>ニュース</h2>
+    <p>5月3日、5月4日　サッポロモノヴィレッジ出展決定　→　無事終了いたしました。たくさんのご来場ありがとうございました！</p>
+  </section>
+
+  <section class="about">
+    <h2>ユニット紹介</h2>
+    <p>nazoooは2024年に結成した謎解きユニットです。大人もこどももおねーさんも楽しめる謎解きを、会社員の傍らゆるっと作っています。<br><br>子ども向けのイラストやギミックいっぱいの謎や、おとな向けの小説を模した文章のみの謎など、多種多様な作品にチャレンジ中です。<br><br>まだまだ駆け出しで至らぬところもございますが、お楽しみいただけましたら幸いです。</p>
+  </section>
+
+  <section class="features">
+    <h2>特徴</h2>
+    <ul>
+      <li>子ども〜大人まで幅広く楽しめる</li>
+      <li>論理・物語・デザインすべてにこだわり</li>
+      <li>おうちでじっくり取り組める小説型謎解き</li>
+    </ul>
+  </section>
+
+  <section class="products">
     <h2>商品一覧</h2>
+    <p>いずれも通販にてご対応可能です。（送料別）<br>お申し込みはXまでお願いいたします。</p>
     <div class="products">
       <div class="card">
+        <span class="badge">NEW</span>
+        <div class="image-placeholder"></div>
         <h3>春の謎</h3>
-        <div class="difficulty">難易度：★★☆☆☆</div>
-        <div class="price">価格：500円</div>
-        <div class="desc">小さな村の祭りで起きた奇妙な事件を解き明かせ。</div>
+        <p>価格：500円</p>
       </div>
       <div class="card">
+        <div class="image-placeholder"></div>
         <h3>夏の謎</h3>
-        <div class="difficulty">難易度：★★★☆☆</div>
-        <div class="price">価格：500円</div>
-        <div class="desc">海辺で拾った手紙が、すべての始まりだった。</div>
+        <p>価格：500円</p>
       </div>
       <div class="card">
+        <div class="image-placeholder"></div>
         <h3>秋の謎</h3>
-        <div class="difficulty">難易度：★★★★☆</div>
-        <div class="price">価格：600円</div>
-        <div class="desc">紅葉の館で語られる“消えた鍵”の真相とは。</div>
+        <p>価格：600円</p>
       </div>
       <div class="card">
+        <div class="image-placeholder"></div>
         <h3>冬の謎</h3>
-        <div class="difficulty">難易度：★★★☆☆</div>
-        <div class="price">価格：500円</div>
-        <div class="desc">雪に閉ざされた町で起きた未解決事件。</div>
+        <p>価格：500円</p>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="events">
+    <h2>出展活動歴</h2>
+    <p>2024年5月：サッポロモノヴィレッジ出展</p>
+  </section>
+
+  <section class="sns">
+    <h2>SNS</h2>
+    <div class="sns-links">
+      <a href="https://x.com/nazooo2024" target="_blank">X（旧Twitter）</a>
+      <a href="https://www.instagram.com/nazooo_2024?igsh=MWU1NHp5NndjeGVmdw==" target="_blank">Instagram</a>
+    </div>
+    <p style="margin-top:1em;">お申込みやお問い合わせはXまで頂けますと幸いです。</p>
+  </section>
 </body>
 </html>
