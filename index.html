@@ -35,32 +35,28 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
-    /* 見出しデザインA：黒の下線 */
+    h2.section-title {
+      text-align: center;
+      width: 100%;
+      padding-bottom: 0.3em;
+      margin-bottom: 1em;
+    }
     .section-title.news {
       border-bottom: 3px solid black;
-      display: inline-block;
     }
-    /* 見出しデザインB：点線下線 */
     .section-title.unit {
       border-bottom: 3px dashed #66a6ff;
-      display: inline-block;
       color: #66a6ff;
     }
-    /* 見出しデザインC：二重線下線 */
     .section-title.products {
       border-bottom: double 5px #00aaff;
-      display: inline-block;
       color: #00aaff;
     }
-    /* 見出しデザインD：上下線 */
     .section-title.history {
       border-top: 3px solid #00aaff;
       border-bottom: 3px solid #00aaff;
-      padding: 0.3em 0;
       color: #00aaff;
-      display: inline-block;
     }
-    /* 見出しデザインE：背景色ボックス */
     .section-title.sns {
       background: #d0efff;
       display: inline-block;
@@ -121,6 +117,7 @@
       display: flex;
       gap: 1em;
       margin-top: 1em;
+      justify-content: center;
     }
     .sns-links a {
       display: flex;
@@ -203,7 +200,7 @@
       <a href="https://x.com/nazooo2024" target="_blank"><i class="fab fa-x-twitter"></i>X（@nazooo2024）</a>
       <a href="https://www.instagram.com/nazooo_2024?igsh=MWU1NHp5NndjeGVmdw==" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
     </div>
-    <p style="margin-top: 1em;">お申込みやお問い合わせはXまで頂けますと幸いです。</p>
+    <p style="margin-top: 1em; text-align:center">お申込みやお問い合わせはXまで頂けますと幸いです。</p>
   </section>
 </body>
 </html>
