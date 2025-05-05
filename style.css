@@ -1,170 +1,28 @@
-body {
+
+/* ベースフォント設定 */
+body, p, h3 {
+  font-size: 1.05em;
   font-family: 'Noto Sans JP', sans-serif;
-  margin: 0;
-  background: #fafafa;
   color: #333;
-}
-
-header {
-  background: linear-gradient(to right, #89f7fe, #66a6ff);
-  color: white;
-  text-align: center;
-  padding: 2.5em 1em 2em;
-}
-
-header h1 {
+  background-color: #fafafa;
   margin: 0;
-  font-size: 2.2em;
 }
 
-header p {
-  margin-top: 0.5em;
-  font-size: 1.1em;
-}
-
-section {
-  max-width: 960px;
-  margin: 2em auto;
-  padding: 1.5em;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-h2.section-title {
-  text-align: center;
-  margin: 0 auto 1.5em;
-  font-weight: bold;
-  font-size: 1.5em;
-  padding: 0.6em 1em;
-  color: #333;
-  background-color: #d0f0ff;
-  border-radius: 8px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.news-box {
-  background: #fff5f5;
-  padding: 1.5em;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.products-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  margin-top: 1em;
-}
-
-.card {
-  background: #f3faff;
-  border-radius: 10px;
-  padding: 1em;
-  flex: 1 1 calc(50% - 0.5em);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  position: relative;
-}
-
-.card .image {
-  background: #ccc;
-  height: 120px;
-  border-radius: 6px;
-  margin-bottom: 0.5em;
-}
-
-.card .badge {
-  position: absolute;
-  top: 0.7em;
-  left: 0.7em;
-  background: #ff6f91;
-  color: white;
-  padding: 0.3em 0.5em;
-  font-size: 0.7em;
-  border-radius: 5px;
-}
-
-.sns-links {
-  display: flex;
-  gap: 1em;
-  margin-top: 1em;
-  justify-content: center;
-}
-
-.sns-links a {
-  display: flex;
-  align-items: center;
-  gap: 0.4em;
-  background: #eee;
-  padding: 0.6em 1em;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 0.9em;
-}
-
-@media (max-width: 600px) {
-  .card {
-    flex: 1 1 100%;
-  }
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #f7f7f7;  /* 背景を淡いグレーに変更 */
-  border-top: 1px solid #ddd;
-  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.08);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0.5em 0;
-  z-index: 1000;
-}
-
-footer a {
-  color: #66a6ff;  /* 淡い水色に変更 */
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 0.72rem;
-}
-
-footer i {
-  font-size: 1.3rem;
-  margin-bottom: 0.2em;
-}
-
-
-/* タイトルリンク（nazoooのみ） */
-.title-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* 他のリンクには下線付き */
-a:not(.title-link) {
-  text-decoration: underline;
-  color: #007acc;
-}
-
-/* 商品カードレイアウト：レスポンシブ */
+/* 商品グリッド（レスポンシブ） */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5em;
-  margin-top: 1em;
+  gap: 2em;
+  padding: 1rem;
+  margin-top: 2em;
 }
 
-/* カード全体 */
+/* 商品カード全体 */
 .product-card {
   position: relative;
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -173,9 +31,23 @@ a:not(.title-link) {
 /* 商品画像 */
 .product-card img {
   width: 100%;
-  height: 420px;
+  height: 170px;
   object-fit: cover;
   border-bottom: 1px solid #eee;
+}
+
+/* 商品テキスト部 */
+.product-content {
+  padding: 1.2em 1.4em;
+  text-align: left;
+}
+
+/* 商品テキストのフォント統一 */
+.product-card p,
+.product-card h3,
+.product-card span,
+.product-card li {
+  font-size: 1.05em;
 }
 
 /* 価格バッジ */
@@ -185,56 +57,15 @@ a:not(.title-link) {
   left: 0.7em;
   background: #ff6f00;
   color: white;
-  padding: 0.5em 1em; /* ← サイズUP */
-  font-size: 1em;     /* ← 通常が 0.7em なら1.5倍程度 */
+  padding: 0.5em 1em;
+  font-size: 1em;
   font-weight: bold;
   border-radius: 8px;
   z-index: 1;
 }
 
-
-
-
-/* 本文のフォントサイズ（①） */
-body, p, h3 {
-  font-size: 0.95em;
-}
-
-/* 商品グリッド（④隙間） */
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2em; /* ←ここがカード間のスペース */
-  margin-top: 2em; /* 上側のスペースも調整 */
-}
-
-/* 商品カード（②③⑤） */
-.product-card {
-  position: relative;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35); /* ⑤ 濃くした影 */
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-/* 商品画像（②） */
-.product-card img {
-  width: 100%;
-  height: 189px; /* ② 今までの半分 */
-  object-fit: cover;
-  border-bottom: 1px solid #eee;
-}
-
-/* 商品本文（③） */
-.product-content {
-  padding: 1em;
-  text-align: left;
-}
-
-/* フッターリンクの装飾除去（⑥） */
+/* フッターのリンク装飾除去 */
 footer a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none !important;
+  color: inherit !important;
 }
