@@ -197,15 +197,15 @@ a:not(.title-link) {
 
 /* 本文のフォントサイズ（①） */
 body, p, h3 {
-  font-size: 0.85em;
+  font-size: 0.95em;
 }
 
 /* 商品グリッド（④隙間） */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2em;
-  margin-top: 1em;
+  gap: 2em; /* ←ここがカード間のスペース */
+  margin-top: 2em; /* 上側のスペースも調整 */
 }
 
 /* 商品カード（②③⑤） */
@@ -222,7 +222,7 @@ body, p, h3 {
 /* 商品画像（②） */
 .product-card img {
   width: 100%;
-  height: 210px; /* ② 今までの半分 */
+  height: 189px; /* ② 今までの半分 */
   object-fit: cover;
   border-bottom: 1px solid #eee;
 }
