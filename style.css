@@ -1,71 +1,188 @@
-
-/* ベースフォント設定 */
-body, p, h3 {
-  font-size: 1.05em;
-  font-family: 'Noto Sans JP', sans-serif;
+/* 全体のフォントとベーススタイル */
+body {
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
   color: #333;
-  background-color: #fafafa;
+}
+
+/* ヘッダー */
+header {
+  background-color: #ffffff;
+  padding: 1.5em 1em 0.5em;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.2em;
   margin: 0;
 }
 
-/* 商品グリッド（レスポンシブ） */
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2em;
-  padding: 1rem;
-  margin-top: 2em;
+header h1 a.title-link {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* 商品カード全体 */
+header p {
+  margin-top: 0.5em;
+  font-size: 1.1em;
+}
+
+/* セクション共通 */
+section {
+  max-width: 960px;
+  margin: 2em auto;
+  padding: 1.5em;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+h2.section-title {
+  text-align: center;
+  margin: 0 auto 1.5em;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 0.6em 1em;
+  color: #333;
+  background-color: #d0f0ff;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* NEWSボックス */
+.news-box {
+  background: #fff5f5;
+  padding: 1.5em;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* 商品グリッド */
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  margin-top: 1em;
+  justify-content: center;
+}
+
+/* 商品カード */
 .product-card {
-  position: relative;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+  width: 100%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
 }
 
-/* 商品画像 */
-.product-card img {
+.product-image {
   width: 100%;
-  height: 170px;
+  height: 220px;
   object-fit: cover;
-  border-bottom: 1px solid #eee;
 }
 
-/* 商品テキスト部 */
-.product-content {
-  padding: 1.2em 1.4em;
-  text-align: left;
+.product-info {
+  padding: 1em;
 }
 
-/* 商品テキストのフォント統一 */
-.product-card p,
-.product-card h3,
-.product-card span,
-.product-card li {
-  font-size: 1.05em;
+.product-info h3 {
+  margin: 0.3em 0;
+  font-size: 1.1em;
 }
 
-/* 価格バッジ */
-.price-tag {
-  position: absolute;
-  top: 0.7em;
-  left: 0.7em;
-  background: #ff6f00;
+.product-info p {
+  font-size: 0.9em;
+  margin: 0.3em 0;
+  line-height: 1.4;
+}
+
+/* 難易度と価格 */
+.product-info .difficulty {
+  font-size: 0.9em;
+  margin-bottom: 0.3em;
+}
+
+.product-info .price-badge {
+  background-color: #ff6600;
   color: white;
-  padding: 0.5em 1em;
-  font-size: 1em;
-  font-weight: bold;
-  border-radius: 8px;
-  z-index: 1;
+  font-size: 0.85em;
+  padding: 0.3em 0.8em;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 0.6em;
 }
 
-/* フッターのリンク装飾除去 */
+/* SNSリンク */
+.sns-links {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+  justify-content: center;
+}
+
+.sns-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  background: #eee;
+  padding: 0.6em 1em;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+/* フッター */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f7f7f7;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5em 0;
+  z-index: 1000;
+}
+
 footer a {
-  text-decoration: none !important;
-  color: inherit !important;
+  color: #66a6ff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.72rem;
+}
+
+footer i {
+  font-size: 1.3rem;
+  margin-bottom: 0.2em;
+}
+
+/* タイトルリンク（nazoooのみ） */
+.title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 他リンクには下線付き */
+a:not(.title-link) {
+  text-decoration: underline;
+  color: #007acc;
+}
+
+/* メディアクエリ：スマホでは1列 */
+@media (max-width: 600px) {
+  .products-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 }
