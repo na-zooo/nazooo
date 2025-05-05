@@ -1,85 +1,80 @@
+
 body {
-  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+  font-family: sans-serif;
+  line-height: 1.6;
   margin: 0;
-  background: #ffffff;
+  padding: 0;
+  background: #fff;
   color: #333;
 }
 
-h1 {
+header {
   text-align: center;
-  background-color: #d0f0ff;
+  padding: 1.5em 0 0.5em;
+  background-color: #e3f4ff;
+}
+
+header h1 {
+  font-size: 2em;
   margin: 0;
-  padding: 1em 0 0.2em;
-  font-size: 1.8em;
 }
 
-h1 a {
-  text-decoration: none;
-  color: inherit;
-}
-
-h1 + p {
-  text-align: center;
-  font-size: 0.85em;
-  margin-bottom: 1em;
+header p {
+  font-size: 0.95em;
+  color: #666;
+  margin: 0.3em 0 0;
 }
 
 .section-title {
   text-align: center;
-  background-color: #d0f0ff;
-  padding: 0.5em;
+  background: #d0f0ff;
+  padding: 0.7em;
   font-weight: bold;
-  font-size: 1em;
-  border-radius: 6px;
+  font-size: 1.2em;
+  border-radius: 8px;
   margin: 2em auto 1em;
-  max-width: 100%;
+  max-width: 960px;
 }
 
 .news-box {
-  background-color: #fff5f5;
-  padding: 1em;
-  text-align: center;
+  background: #fff5f5;
+  padding: 1.2em;
   border-radius: 8px;
+  text-align: center;
   margin: 1em auto;
-  max-width: 90%;
+  max-width: 960px;
 }
 
-.products-container {
+section {
+  padding: 1em;
+  text-align: center;
+  max-width: 960px;
+  margin: auto;
+}
+
+.products-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5em;
-  margin: 2em auto;
-  max-width: 960px;
-  padding: 0 1em;
+  gap: 1em;
+  margin-top: 1em;
 }
 
-.product-card {
-  background: #fff;
+.card {
+  background: #f3faff;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   padding: 1em;
-  max-width: 320px;
-  width: 100%;
-  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  max-width: 300px;
+  flex: 1 1 300px;
   position: relative;
 }
 
-.product-card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 280px;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-bottom: 0.5em;
-}
-
-.price-badge {
+.card .badge {
   position: absolute;
   top: 0.7em;
   left: 0.7em;
-  background-color: #ff6600;
+  background: #ff5500;
   color: white;
   padding: 0.4em 0.7em;
   font-size: 1em;
@@ -87,69 +82,51 @@ h1 + p {
   font-weight: bold;
 }
 
-.product-card h2 {
-  font-size: 1em;
-  margin: 0.5em 0 0.3em;
-}
-
-.product-card p {
-  font-size: 0.85em;
-  margin: 0.2em 0;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
+.product-image {
   width: 100%;
-  background-color: #f0f8ff;
-  border-top: 1px solid #ccc;
-  display: flex;
-  justify-content: space-around;
-  padding: 0.4em 0;
-  z-index: 1000;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.5em;
+  max-height: 270px;
+  object-fit: cover;
 }
 
-footer a {
-  text-decoration: none;
-  color: #000;
-  font-size: 0.7em;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-footer i {
-  font-size: 1.2em;
-  margin-bottom: 0.2em;
-}
-
-/* 通常リンク */
-a:not(.title-link) {
-  text-decoration: underline;
-  color: #007acc;
-}
-
-/* SNSボタン */
 .sns-links {
   display: flex;
   justify-content: center;
   gap: 1em;
-  margin-top: 1em;
+  margin: 1em 0;
+  flex-wrap: wrap;
 }
 
-.sns-links a {
-  background-color: #eee;
-  padding: 0.4em 1em;
+.sns-button {
+  background: #eee;
+  padding: 0.6em 1em;
   border-radius: 8px;
   text-decoration: none;
   color: #333;
-  font-size: 0.85em;
+  font-size: 0.9em;
 }
 
-/* レスポンシブ対応 */
-@media screen and (max-width: 600px) {
-  .product-card {
-    max-width: 100%;
-  }
+footer {
+  background: #f7f7f7;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  padding: 0.6em 0;
+  font-size: 0.75em;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
+}
+
+.title-link {
+  text-decoration: none;
+  color: inherit;
 }
