@@ -56,12 +56,11 @@ h2.section-title {
   text-align: center;
 }
 
-.sns-links i {
-  font-size: 1.35em;
-}
-
-.sns-links a {
-  font-size: 0.9em;  /* テキストサイズを固定 */
+.sns-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6em;
 }
 
 .sns-links a {
@@ -72,8 +71,14 @@ h2.section-title {
   padding: 0.6em 1em;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 0.9em;
+  font-size: 0.8em;        /* 文字サイズ小さめに統一 */
+  white-space: nowrap;     /* 改行を防止し、ロゴ＋文字を1行に */
 }
+
+.sns-links i {
+  font-size: 1.35em;       /* ロゴだけ拡大 */
+}
+
 
 footer {
   position: fixed;
@@ -121,7 +126,7 @@ footer i {
   margin: 0 auto;
   width: auto;
   width: 100%;         /* 横いっぱいに表示 */
-  height: 250px;       /* または目的に応じて auto / cover */
+  height: 200px;       /* または目的に応じて auto / cover */
   object-fit: cover;
   border-bottom: 1px solid #eee;
 }
