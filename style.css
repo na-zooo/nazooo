@@ -1,22 +1,36 @@
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-    color: #333;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  background: #fafafa;
+  color: #333;
 }
-header, footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
+
+header {
+  background: linear-gradient(to right, #89f7fe, #66a6ff);
+  color: white;
+  text-align: center;
+  padding: 2.5em 1em 2em;
 }
-main {
-    padding: 2em;
+
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
 }
+
+header p {
+  margin-top: 0.5em;
+  font-size: 1.1em;
+}
+
 section {
-    margin-bottom: 2em;
+  max-width: 960px;
+  margin: 2em auto;
+  padding: 1.5em;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
+
 h2.section-title {
   text-align: center;
   margin: 0 auto 1.5em;
@@ -29,16 +43,68 @@ h2.section-title {
   width: 100%;
   box-sizing: border-box;
 }
-.product {
-    background: #fff;
-    padding: 1em;
-    margin-bottom: 1em;
-    border: 1px solid #ddd;
+
+.news-box {
+  background: #fff5f5;
+  padding: 1.5em;
+  border-radius: 10px;
+  text-align: center;
 }
-.product img {
-    max-width: 100%;
-    height: auto;
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 1em;
 }
-a {
-    color: #0077cc;
+
+.card {
+  background: #f3faff;
+  border-radius: 10px;
+  padding: 1em;
+  flex: 1 1 calc(50% - 0.5em);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.card .image {
+  background: #ccc;
+  height: 120px;
+  border-radius: 6px;
+  margin-bottom: 0.5em;
+}
+
+.card .badge {
+  position: absolute;
+  top: 0.7em;
+  left: 0.7em;
+  background: #ff6f91;
+  color: white;
+  padding: 0.3em 0.5em;
+  font-size: 0.7em;
+  border-radius: 5px;
+}
+
+.sns-links {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+  justify-content: center;
+}
+
+.sns-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  background: #eee;
+  padding: 0.6em 1em;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100%;
+  }
 }
