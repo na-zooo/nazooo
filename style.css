@@ -151,3 +151,21 @@ footer i {
     /* PCでは可能な範囲でカードが自動拡張して並ぶ */
   }
 }
+.product-card {
+  background-color: #fff;
+  border-radius: 12px; /* カードの角を丸くする */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* やや強めのシャドウ */
+  padding: 1em;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px); /* ホバー時に少し浮かせる */
+}
+.product-card img {
+  border-radius: 8px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
