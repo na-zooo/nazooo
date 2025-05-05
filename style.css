@@ -109,35 +109,31 @@ h2.section-title {
   }
 }
 
-.fixed-footer {
+footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #dff5ff;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 0.4em 0;
-  border-top: 1px solid #b0e0ff;
   z-index: 1000;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.fixed-footer a {
-  color: #333;
+footer a {
+  color: #007BFF;
   text-decoration: none;
-  font-size: 0.75em;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 0.7rem;
 }
 
-.fixed-footer a i {
-  font-size: 1.3em;
+footer i {
+  font-size: 1.2rem;
   margin-bottom: 0.2em;
-}
-
-.fixed-footer a:hover {
-  color: #007acc;
 }
