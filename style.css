@@ -140,47 +140,14 @@ footer i {
 
 .product-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5em;
-  padding: 1.5em;
-}
-
-.product-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  overflow: hidden;
-  transition: transform 0.2s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
-.product-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.product-info {
+  grid-template-columns: repeat(2, 1fr); /* スマホで2列 */
+  gap: 1em;
   padding: 1em;
 }
 
-.product-info h3 {
-  margin: 0.3em 0;
-  font-size: 1.1em;
-  color: #333;
-}
-
-.product-info p {
-  font-size: 0.95em;
-  color: #666;
-}
-
-/* PC表示時は2列 */
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .product-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    /* PCでは可能な範囲でカードが自動拡張して並ぶ */
   }
 }
