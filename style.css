@@ -138,40 +138,72 @@ footer i {
   margin-bottom: 0.2em;
 }
 
-.product-card {
+
+
+
+
+.product-list {
   display: flex;
   flex-direction: column;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12); /* ←影を強調 */
-  overflow: hidden; /* 画像の角丸を整える */
-  margin: 1.5em 0;
+  gap: 1.2em;
+  margin: 2em auto;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.product-card img {
+.product-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.product-image {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+}
+
+.product-image img {
   width: 100%;
-  height: 180px; /* 縦横比調整、必要に応じて変更可 */
+  height: 100%;
   object-fit: cover;
-  border-radius: 0; /* ←角丸なし（直角） */
   display: block;
-  margin: 0;
 }
 
-.product-card-body {
-  padding: 1em;
-  font-size: 0.95em;
-}
-
-.product-card-body h3 {
-  margin: 0.2em 0;
-  font-size: 1.2em;
-}
-
-.product-card-body .price {
+.price-badge {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  background: #f89e49;
+  color: #fff;
+  font-size: 0.8em;
+  padding: 0.2em 0.5em;
+  border-radius: 6px;
   font-weight: bold;
-  margin-top: 0.2em;
-  margin-bottom: 0.5em;
+}
+
+.product-text {
+  padding: 0.8em 1em;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.product-title {
+  font-weight: bold;
+  margin: 0 0 0.3em;
+}
+
+.product-desc {
+  margin: 0;
+  color: #333;
+  font-size: 0.85em;
+}
+
+@media (max-width: 480px) {
+  .product-item {
+    flex-direction: row;
+  }
 }
