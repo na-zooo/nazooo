@@ -56,12 +56,12 @@ h2.section-title {
   text-align: center;
 }
 
-.sns-links {
-  display: flex;
-  gap: 1em;
-  margin-top: 1em;
-  justify-content: center;
-    font-size: 1.35em;
+.sns-links i {
+  font-size: 1.35em;
+}
+
+.sns-links a {
+  font-size: 0.9em;  /* テキストサイズを固定 */
 }
 
 .sns-links a {
@@ -120,30 +120,30 @@ footer i {
   display: block;
   margin: 0 auto;
   width: auto;
-  max-width: 100%;
-  height: 250px;
+  width: 100%;         /* 横いっぱいに表示 */
+  height: 250px;       /* または目的に応じて auto / cover */
   object-fit: cover;
   border-bottom: 1px solid #eee;
 }
 
 .product-content {
-  text-align: left;
+  text-align: center;
   padding: 0 1em 1em;
 }
 
 .product-content h3 {
-  margin-left: 0.2em;
+  margin: 0.4em 0;
 }
 
 .price-tag {
   position: absolute;
   top: 8px;
   left: 8px;
-  background-color: #ff6600; /* より鮮やかなオレンジ */
+  background-color:#ff944d;  /* 柔らかめのオレンジ */
   color: white;
-  font-size: 18px;            /* 元が12px → 1.5倍 */
+  font-size: 15px;            /* 元が12px → 1.5倍 */
   font-weight: bold;
-  padding: 8px 14px;          /* バッジ内余白も拡張 */
+  padding: 6px 12px;          /* バッジ内余白も拡張 */
   border-radius: 10px;
 }
 
@@ -155,4 +155,8 @@ a.title-link {
 a:not(.title-link) {
   text-decoration: underline;
   color: #007acc;
+}
+
+.news-box {
+  font-size: 0.95em;  /* 本文と統一 */
 }
