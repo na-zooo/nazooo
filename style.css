@@ -138,34 +138,61 @@ footer i {
   margin-bottom: 0.2em;
 }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* スマホで2列 */
-  gap: 1em;
-  padding: 1em;
+.product-list {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-size: 14px; /* 本文フォントを小さく */
 }
 
-@media (min-width: 768px) {
-  .product-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    /* PCでは可能な範囲でカードが自動拡張して並ぶ */
-  }
-}
-.product-card {
+.product-item {
+  display: flex;
   background-color: #fff;
-  border-radius: 12px; /* カードの角を丸くする */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* やや強めのシャドウ */
-  padding: 1em;
-  transition: transform 0.2s ease;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  flex-direction: row;
 }
 
-.product-card:hover {
-  transform: translateY(-3px); /* ホバー時に少し浮かせる */
-}
-.product-card img {
-  border-radius: 8px;
-  width: 100%;
+.product-image {
+  flex: 0 0 160px;
+  height: 120px;
   object-fit: cover;
 }
 
+.product-details {
+  padding: 1rem;
+  flex-grow: 1;
+}
 
+.product-details h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.price-tag {
+  display: inline-block;
+  background: #0af;
+  color: white;
+  padding: 0.2em 0.6em;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-details p {
+  margin: 0.2rem 0;
+  line-height: 1.4;
+}
+
+/* スマホでは1列（念のため） */
+@media (max-width: 600px) {
+  .product-item {
+    flex-direction: column;
+  }
+  .product-image {
+    width: 100%;
+    height: auto;
+  }
+}
