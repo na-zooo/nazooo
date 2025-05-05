@@ -181,12 +181,60 @@ a:not(.title-link) {
 /* 価格バッジ */
 .price-tag {
   position: absolute;
-  top: 8px;
-  left: 8px;
-  background-color: #ff7a00;
+  top: 0.7em;
+  left: 0.7em;
+  background: #ff6f00;
   color: white;
-  font-size: 12px;
+  padding: 0.5em 1em; /* ← サイズUP */
+  font-size: 1em;     /* ← 通常が 0.7em なら1.5倍程度 */
   font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 10px;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+
+
+
+/* 本文のフォントサイズ（①） */
+body, p, h3 {
+  font-size: 0.85em;
+}
+
+/* 商品グリッド（④隙間） */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  margin-top: 1em;
+}
+
+/* 商品カード（②③⑤） */
+.product-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35); /* ⑤ 濃くした影 */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 商品画像（②） */
+.product-card img {
+  width: 100%;
+  height: 210px; /* ② 今までの半分 */
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+/* 商品本文（③） */
+.product-content {
+  padding: 1em;
+  text-align: left;
+}
+
+/* フッターリンクの装飾除去（⑥） */
+footer a {
+  text-decoration: none;
+  color: inherit;
 }
