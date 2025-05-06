@@ -139,6 +139,21 @@ footer i {
 .product-content h3 {
   margin: 0.4em 0;
 }
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 初期は1列 */
+  gap: 1.5em;
+  margin-top: 1em;
+}
+
+/* 画面が600px以上なら2列にする */
+@media (min-width: 600px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
 
 .price-tag {
   position: absolute;
