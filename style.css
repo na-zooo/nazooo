@@ -170,3 +170,18 @@ a:not(.title-link) {
   text-decoration: underline;
   color: #007acc;
 }
+
+.soldout-ribbon {
+  position: absolute;
+  top: 12px;
+  right: -40px;
+  background: #e74c3c;
+  color: white;
+  text-align: center;
+  transform: rotate(45deg);
+  font-size: 0.75em;
+  font-weight: bold;
+  padding: 4px 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
