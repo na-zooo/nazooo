@@ -173,17 +173,16 @@ a:not(.title-link) {
 
 .soldout-ribbon {
   position: absolute;
-  top: 12px;
-  right: -60px;
+  top: 14px;
+  right: -75px;
   background: #e74c3c;
   color: white;
   text-align: center;
   transform: rotate(45deg);
-  font-size: 1.4em;
+  font-size: 2em;              /* ← 文字をさらに大きく */
   font-weight: bold;
-  padding: 10px 70px;
+  padding: 14px 90px;          /* ← 帯を縦横ともに厚く・広く */
   line-height: 1.2;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  z-index: 10;
   white-space: nowrap;
+  z-index: 10;
 }
