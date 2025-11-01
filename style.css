@@ -186,3 +186,13 @@ a:not(.title-link) {
   white-space: nowrap;
   z-index: 10;
 }
+
+.pink-box {
+  background-color: #ffeeee;
+  padding: 1.5em;
+  margin: 1em auto;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
