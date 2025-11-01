@@ -6,71 +6,76 @@
   <title>秋の謎 ヒントページ｜nazooo</title>
   <link rel="stylesheet" href="../style.css">
   <style>
-    /* === hint page === */
-    .hint-hero {
-      background: linear-gradient(90deg,#8ad8ff,#7db0ff);
-      color:#fff;
-      text-align:center;
-      padding:18px 20px;
-      border-radius:12px;
-      margin:24px auto 16px;
-      max-width:880px;
-    }
-    .hint-wrap {
-      max-width:880px;
-      margin:0 auto 60px;
-      padding:0 16px;
-    }
-    .hint-card {
-      background:#fff;
-      border-radius:14px;
-      box-shadow:0 6px 18px rgba(0,0,0,.06);
-      padding:18px;
-      margin:16px 0;
-    }
-    .hint-title {
-      margin:0 0 12px;
-      display:inline-block;
-      background:#dff1ff;
-      padding:10px 14px;
+    /* === hint page : index基準で統一 === */
+    .hint-wrap{max-width:880px;margin:0 auto 60px;padding:0 16px;}
+    .hint-header{
+      background:#d0f0ff;
       border-radius:8px;
+      text-align:center;
+      padding:14px 0;
+      margin:24px auto;
+      font-size:1.25rem;
       font-weight:700;
+      color:#333;
     }
-    .btn-back {
-      display:inline-block;
-      text-decoration:none;
-      background:#77b6e3;
-      color:#fff;
-      padding:10px 14px;
-      border-radius:999px;
+    .hint-card{
+      background:#fff;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,.05);
+      padding:18px 20px;
+      margin:20px auto;
+      width:100%;
+      box-sizing:border-box;
+    }
+    .hint-title{
+      display:block;
+      width:100%;
+      background:#d0ecff;
+      text-align:center;
+      font-size:1.05rem;
       font-weight:700;
+      border-radius:6px;
+      padding:8px 0;
+      margin-bottom:12px;
     }
-    .btn-back:hover { opacity:.9; }
+    .hint-card p{
+      font-size:.95rem;
+      line-height:1.9;
+      margin:.3rem 0;
+      text-align:left;
+    }
+    details>summary{
+      cursor:pointer;
+      font-weight:600;
+    }
+    details[open]>div{
+      margin-top:.6rem;
+    }
   </style>
 </head>
 <body>
 
-  <!-- ▼ ヘッダー（index.htmlからコピー） -->
+  <!-- ▼ ヘッダー（index.htmlと同じ） -->
   <header>
-    <h1>nazooo｜なぞ、する？</h1>
-    <nav>
-      <a href="/nazooo/">HOME</a>
-      <a href="/nazooo/products.html">LINE UP</a>
-      <a href="/nazooo/history.html">HISTORY</a>
-      <a href="/nazooo/sns.html">SNS</a>
-    </nav>
+    <div class="header-inner">
+      <h1>nazooo｜なぞ、する？</h1>
+      <nav>
+        <a href="/nazooo/">HOME</a>
+        <a href="/nazooo/products.html">LINE UP</a>
+        <a href="/nazooo/history.html">HISTORY</a>
+        <a href="/nazooo/sns.html">SNS</a>
+      </nav>
+    </div>
   </header>
   <!-- ▲ ヘッダー -->
 
   <main class="hint-wrap">
-    <section class="hint-hero">
-      <h1 style="margin:0;font-weight:700;">秋の謎　ヒントページ</h1>
-    </section>
+    <div class="hint-header">秋の謎　ヒントページ</div>
 
     <section class="hint-card">
       <h2 class="hint-title">「五文字の謎」のヒント①</h2>
       <p>★個ずれているの★には数字が入る。<br>
-        赤ペンで★が書かれている箇所を探そう。</p>
+         赤ペンで★が書かれている箇所を探そう。</p>
     </section>
 
     <section class="hint-card">
@@ -87,35 +92,29 @@
       <h2 class="hint-title">答え・解説</h2>
       <details>
         <summary>答えを表示する</summary>
-        <div style="margin-top:10px; line-height:1.8;">
+        <div>
           ここに答え。箇条書きOK。<br>
           ・ポイント1<br>
           ・ポイント2
         </div>
       </details>
     </section>
-
-    <p><a class="btn-back" href="/nazooo/">トップへ戻る</a></p>
   </main>
 
-  <!-- ▼ フッター（index.htmlからコピー） -->
+  <!-- ▼ フッター（index.htmlと同じ） -->
   <footer class="fixed-footer">
     <nav class="footer-nav">
       <a href="/nazooo/index.html" class="footer-item">
-        <img src="../icons/home.png" alt="ホーム">
-        <span>ホーム</span>
+        <img src="../icons/home.png" alt="ホーム"><span>ホーム</span>
       </a>
       <a href="/nazooo/products.html" class="footer-item">
-        <img src="../icons/products.png" alt="商品一覧">
-        <span>商品一覧</span>
+        <img src="../icons/products.png" alt="商品一覧"><span>商品一覧</span>
       </a>
       <a href="https://x.com/nazooo2024" class="footer-item" target="_blank">
-        <img src="../icons/x.png" alt="X">
-        <span>X</span>
+        <img src="../icons/x.png" alt="X"><span>X</span>
       </a>
       <a href="https://www.instagram.com/nazooo_2024" class="footer-item" target="_blank">
-        <img src="../icons/instagram.png" alt="Instagram">
-        <span>Instagram</span>
+        <img src="../icons/instagram.png" alt="Instagram"><span>Instagram</span>
       </a>
     </nav>
   </footer>
