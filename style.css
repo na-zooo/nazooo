@@ -196,3 +196,27 @@ a:not(.title-link) {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* === hint page === */
+
+.hint-hero{
+  background: linear-gradient(90deg,#8ad8ff,#7db0ff);
+  color:#fff; text-align:center; padding:18px 20px;
+  border-radius:12px; margin:24px auto 16px; max-width:880px;
+}
+.hint-wrap{ max-width:880px; margin:0 auto 60px; padding:0 16px; }
+.hint-card{
+  background:#fff; border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+  padding:18px; margin:16px 0;
+}
+.hint-title{
+  margin:0 0 12px; display:inline-block;
+  background:#dff1ff; padding:10px 14px; border-radius:8px;
+  font-weight:700;
+}
+.btn-back{
+  display:inline-block; text-decoration:none;
+  background:#77b6e3; color:#fff; padding:10px 14px;
+  border-radius:999px; font-weight:700;
+}
+.btn-back:hover{ opacity:.9; }
