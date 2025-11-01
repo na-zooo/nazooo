@@ -242,3 +242,15 @@ a:not(.title-link) {
 .hint-body img{max-width:100%;height:auto;border-radius:8px;}
 .hint-details summary{cursor:pointer;font-weight:600;font-size:.95rem;}
 .hint-details[open] > .hint-explain{margin-top:.6rem;line-height:1.9;}
+
+
+/* === hint 見出しに水色下線を追加 === */
+.hint-title {
+  background:none;            /* 水色ボックスをやめる */
+  border-bottom:4px solid #d0ecff; /* indexの水色と同系統 */
+  text-align:left;            /* 左揃え */
+  padding-bottom:6px;
+  margin-bottom:12px;
+  font-weight:700;
+  font-size:1.05rem;
+}
