@@ -4,13 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>秋の謎 ヒントページ｜nazooo</title>
+
+  <!-- indexと同一の読み込み（相対パスのみ調整） -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-  <!-- ▼ index.htmlの<header>を丸ごと貼る -->
-  <header>…（indexと同一）…</header>
-  <!-- ▲ -->
+  <!-- ▼ header：index.htmlと同一（リンクだけ../に変更） -->
+  <header>
+    <h1><a href="../index.html" class="title-link">nazooo</a></h1>
+    <p>なぞ、する？</p>
+  </header>
+  <!-- ▲ header -->
 
   <main class="hint-wrap">
     <div class="hint-header">秋の謎　ヒントページ</div>
@@ -38,15 +45,22 @@
       <details class="hint-details">
         <summary>答えを表示する</summary>
         <div class="hint-explain">
-          ここに答え。箇条書きOK。<br>・ポイント1<br>・ポイント2
+          ここに答え。箇条書きOK。<br>
+          ・ポイント1<br>
+          ・ポイント2
         </div>
       </details>
     </section>
   </main>
 
-  <!-- ▼ index.htmlの<footer>を丸ごと貼る -->
-  <footer class="fixed-footer">…（indexと同一）…</footer>
-  <!-- ▲ -->
+  <!-- ▼ footer：index.htmlと同一（リンクだけ../に変更） -->
+  <footer>
+    <a href="../index.html"><i class="fas fa-home"></i><span>ホーム</span></a>
+    <a href="../products.html"><i class="fas fa-box-open"></i><span>商品一覧</span></a>
+    <a href="https://x.com/nazooo2024"><i class="fab fa-x-twitter"></i><span>X</span></a>
+    <a href="https://www.instagram.com/nazooo_2024"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+  </footer>
+  <!-- ▲ footer -->
 
 </body>
 </html>
