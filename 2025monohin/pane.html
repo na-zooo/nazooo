@@ -5,120 +5,48 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>秋の謎 ヒントページ｜nazooo</title>
   <link rel="stylesheet" href="../style.css">
-  <style>
-    /* === hint page : index基準で統一 === */
-    .hint-wrap{max-width:880px;margin:0 auto 60px;padding:0 16px;}
-    .hint-header{
-      background:#d0f0ff;
-      border-radius:8px;
-      text-align:center;
-      padding:14px 0;
-      margin:24px auto;
-      font-size:1.25rem;
-      font-weight:700;
-      color:#333;
-    }
-    .hint-card{
-      background:#fff;
-      border-radius:12px;
-      box-shadow:0 4px 12px rgba(0,0,0,.05);
-      padding:18px 20px;
-      margin:20px auto;
-      width:100%;
-      box-sizing:border-box;
-    }
-    .hint-title{
-      display:block;
-      width:100%;
-      background:#d0ecff;
-      text-align:center;
-      font-size:1.05rem;
-      font-weight:700;
-      border-radius:6px;
-      padding:8px 0;
-      margin-bottom:12px;
-    }
-    .hint-card p{
-      font-size:.95rem;
-      line-height:1.9;
-      margin:.3rem 0;
-      text-align:left;
-    }
-    details>summary{
-      cursor:pointer;
-      font-weight:600;
-    }
-    details[open]>div{
-      margin-top:.6rem;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- ▼ ヘッダー（index.htmlと同じ） -->
-  <header>
-    <div class="header-inner">
-      <h1>nazooo｜なぞ、する？</h1>
-      <nav>
-        <a href="/nazooo/">HOME</a>
-        <a href="/nazooo/products.html">LINE UP</a>
-        <a href="/nazooo/history.html">HISTORY</a>
-        <a href="/nazooo/sns.html">SNS</a>
-      </nav>
-    </div>
-  </header>
-  <!-- ▲ ヘッダー -->
+  <!-- ▼ index.htmlの<header>を丸ごと貼る -->
+  <header>…（indexと同一）…</header>
+  <!-- ▲ -->
 
   <main class="hint-wrap">
     <div class="hint-header">秋の謎　ヒントページ</div>
 
     <section class="hint-card">
       <h2 class="hint-title">「五文字の謎」のヒント①</h2>
-      <p>★個ずれているの★には数字が入る。<br>
-         赤ペンで★が書かれている箇所を探そう。</p>
+      <div class="hint-body">
+        ★個ずれているの★には数字が入る。<br>
+        赤ペンで★が書かれている箇所を探そう。
+      </div>
     </section>
 
     <section class="hint-card">
       <h2 class="hint-title">「五文字の謎」のヒント②</h2>
-      <p>（ここに本文）</p>
+      <div class="hint-body">（ここに本文）</div>
     </section>
 
     <section class="hint-card">
       <h2 class="hint-title">「五文字の謎」のヒント③</h2>
-      <p>（ここに本文）</p>
+      <div class="hint-body">（ここに本文）</div>
     </section>
 
     <section class="hint-card">
       <h2 class="hint-title">答え・解説</h2>
-      <details>
+      <details class="hint-details">
         <summary>答えを表示する</summary>
-        <div>
-          ここに答え。箇条書きOK。<br>
-          ・ポイント1<br>
-          ・ポイント2
+        <div class="hint-explain">
+          ここに答え。箇条書きOK。<br>・ポイント1<br>・ポイント2
         </div>
       </details>
     </section>
   </main>
 
-  <!-- ▼ フッター（index.htmlと同じ） -->
-  <footer class="fixed-footer">
-    <nav class="footer-nav">
-      <a href="/nazooo/index.html" class="footer-item">
-        <img src="../icons/home.png" alt="ホーム"><span>ホーム</span>
-      </a>
-      <a href="/nazooo/products.html" class="footer-item">
-        <img src="../icons/products.png" alt="商品一覧"><span>商品一覧</span>
-      </a>
-      <a href="https://x.com/nazooo2024" class="footer-item" target="_blank">
-        <img src="../icons/x.png" alt="X"><span>X</span>
-      </a>
-      <a href="https://www.instagram.com/nazooo_2024" class="footer-item" target="_blank">
-        <img src="../icons/instagram.png" alt="Instagram"><span>Instagram</span>
-      </a>
-    </nav>
-  </footer>
-  <!-- ▲ フッター -->
+  <!-- ▼ index.htmlの<footer>を丸ごと貼る -->
+  <footer class="fixed-footer">…（indexと同一）…</footer>
+  <!-- ▲ -->
 
 </body>
 </html>
