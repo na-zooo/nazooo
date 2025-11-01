@@ -220,3 +220,25 @@ a:not(.title-link) {
   border-radius:999px; font-weight:700;
 }
 .btn-back:hover{ opacity:.9; }
+
+
+
+/* === HINT PAGES (共通) === */
+.hint-wrap{max-width:880px;margin:0 auto 60px;padding:0 16px;}
+.hint-header{
+  background:#d0f0ff; /* indexと同じ水色 */
+  border-radius:8px;text-align:center;
+  padding:14px 0;margin:24px auto;font-size:1.25rem;font-weight:700;color:#333;
+}
+.hint-card{
+  background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.05);
+  padding:18px 20px;margin:20px auto;width:100%;box-sizing:border-box;
+}
+.hint-title{
+  display:block;width:100%;text-align:center;
+  background:#d0ecff;border-radius:6px;padding:8px 0;margin:0 0 12px;font-weight:700;font-size:1.05rem;
+}
+.hint-body{font-size:.95rem;line-height:1.9;letter-spacing:.01em;margin:.3rem 0;}
+.hint-body img{max-width:100%;height:auto;border-radius:8px;}
+.hint-details summary{cursor:pointer;font-weight:600;font-size:.95rem;}
+.hint-details[open] > .hint-explain{margin-top:.6rem;line-height:1.9;}
