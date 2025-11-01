@@ -5,20 +5,69 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>秋の謎 ヒントページ</title>
   <link rel="stylesheet" href="../style.css">
+  <style>
+    /* === hint page === */
+    .hint-hero{
+      background: linear-gradient(90deg,#8ad8ff,#7db0ff);
+      color:#fff; text-align:center; padding:18px 20px;
+      border-radius:12px; margin:24px auto 16px; max-width:880px;
+    }
+    .hint-wrap{ max-width:880px; margin:0 auto 60px; padding:0 16px; }
+    .hint-card{
+      background:#fff; border-radius:14px;
+      box-shadow:0 6px 18px rgba(0,0,0,.06);
+      padding:18px; margin:16px 0;
+    }
+    .hint-title{
+      margin:0 0 12px; display:inline-block;
+      background:#dff1ff; padding:10px 14px; border-radius:8px;
+      font-weight:700;
+    }
+    .btn-back{
+      display:inline-block; text-decoration:none;
+      background:#77b6e3; color:#fff; padding:10px 14px;
+      border-radius:999px; font-weight:700;
+    }
+    .btn-back:hover{ opacity:.9; }
+  </style>
 </head>
 <body>
   <div class="hint-wrap">
+
     <header class="hint-hero">
       <h1 style="margin:0;font-weight:700;">秋の謎　ヒントページ</h1>
     </header>
 
     <section class="hint-card">
       <h2 class="hint-title">「五文字の謎」のヒント①</h2>
-      <p>★個ずつずれているの★には数字が入る。<br>
+      <p>★個ずれているの★には数字が入る。<br>
         赤ペンで★が書かれている箇所を探そう。</p>
     </section>
 
+    <section class="hint-card">
+      <h2 class="hint-title">「五文字の謎」のヒント②</h2>
+      <p>（ここに本文）</p>
+    </section>
+
+    <section class="hint-card">
+      <h2 class="hint-title">「五文字の謎」のヒント③</h2>
+      <p>（ここに本文）</p>
+    </section>
+
+    <section class="hint-card">
+      <h2 class="hint-title">答え・解説</h2>
+      <details>
+        <summary>答えを表示する</summary>
+        <div style="margin-top:10px; line-height:1.8;">
+          ここに答え。箇条書きOK。<br>
+          ・ポイント1<br>
+          ・ポイント2
+        </div>
+      </details>
+    </section>
+
     <p><a class="btn-back" href="/nazooo/">トップへ戻る</a></p>
+
   </div>
 </body>
 </html>
