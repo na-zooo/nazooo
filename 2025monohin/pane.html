@@ -3,40 +3,69 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>秋の謎 ヒントページ</title>
+  <title>秋の謎 ヒントページ｜nazooo</title>
   <link rel="stylesheet" href="../style.css">
   <style>
     /* === hint page === */
-    .hint-hero{
+    .hint-hero {
       background: linear-gradient(90deg,#8ad8ff,#7db0ff);
-      color:#fff; text-align:center; padding:18px 20px;
-      border-radius:12px; margin:24px auto 16px; max-width:880px;
+      color:#fff;
+      text-align:center;
+      padding:18px 20px;
+      border-radius:12px;
+      margin:24px auto 16px;
+      max-width:880px;
     }
-    .hint-wrap{ max-width:880px; margin:0 auto 60px; padding:0 16px; }
-    .hint-card{
-      background:#fff; border-radius:14px;
+    .hint-wrap {
+      max-width:880px;
+      margin:0 auto 60px;
+      padding:0 16px;
+    }
+    .hint-card {
+      background:#fff;
+      border-radius:14px;
       box-shadow:0 6px 18px rgba(0,0,0,.06);
-      padding:18px; margin:16px 0;
+      padding:18px;
+      margin:16px 0;
     }
-    .hint-title{
-      margin:0 0 12px; display:inline-block;
-      background:#dff1ff; padding:10px 14px; border-radius:8px;
+    .hint-title {
+      margin:0 0 12px;
+      display:inline-block;
+      background:#dff1ff;
+      padding:10px 14px;
+      border-radius:8px;
       font-weight:700;
     }
-    .btn-back{
-      display:inline-block; text-decoration:none;
-      background:#77b6e3; color:#fff; padding:10px 14px;
-      border-radius:999px; font-weight:700;
+    .btn-back {
+      display:inline-block;
+      text-decoration:none;
+      background:#77b6e3;
+      color:#fff;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:700;
     }
-    .btn-back:hover{ opacity:.9; }
+    .btn-back:hover { opacity:.9; }
   </style>
 </head>
 <body>
-  <div class="hint-wrap">
 
-    <header class="hint-hero">
+  <!-- ▼ ヘッダー（index.htmlからコピー） -->
+  <header>
+    <h1>nazooo｜なぞ、する？</h1>
+    <nav>
+      <a href="/nazooo/">HOME</a>
+      <a href="/nazooo/products.html">LINE UP</a>
+      <a href="/nazooo/history.html">HISTORY</a>
+      <a href="/nazooo/sns.html">SNS</a>
+    </nav>
+  </header>
+  <!-- ▲ ヘッダー -->
+
+  <main class="hint-wrap">
+    <section class="hint-hero">
       <h1 style="margin:0;font-weight:700;">秋の謎　ヒントページ</h1>
-    </header>
+    </section>
 
     <section class="hint-card">
       <h2 class="hint-title">「五文字の謎」のヒント①</h2>
@@ -67,7 +96,30 @@
     </section>
 
     <p><a class="btn-back" href="/nazooo/">トップへ戻る</a></p>
+  </main>
 
-  </div>
+  <!-- ▼ フッター（index.htmlからコピー） -->
+  <footer class="fixed-footer">
+    <nav class="footer-nav">
+      <a href="/nazooo/index.html" class="footer-item">
+        <img src="../icons/home.png" alt="ホーム">
+        <span>ホーム</span>
+      </a>
+      <a href="/nazooo/products.html" class="footer-item">
+        <img src="../icons/products.png" alt="商品一覧">
+        <span>商品一覧</span>
+      </a>
+      <a href="https://x.com/nazooo2024" class="footer-item" target="_blank">
+        <img src="../icons/x.png" alt="X">
+        <span>X</span>
+      </a>
+      <a href="https://www.instagram.com/nazooo_2024" class="footer-item" target="_blank">
+        <img src="../icons/instagram.png" alt="Instagram">
+        <span>Instagram</span>
+      </a>
+    </nav>
+  </footer>
+  <!-- ▲ フッター -->
+
 </body>
 </html>
