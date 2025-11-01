@@ -266,3 +266,12 @@ a:not(.title-link) {
   background: #d0ecff;       /* indexと同じ水色 */
   border-radius: 4px;        /* 両端を丸める */
 }
+
+
+/* === hint の答え summary を本文と同じウェイトに === */
+.hint-details summary {
+  cursor: pointer;
+  font-weight: 400;   /* 通常の太さに変更 */
+  font-size: .95rem;  /* 本文と統一 */
+  line-height: 1.9;
+}
