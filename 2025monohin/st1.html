@@ -1,41 +1,83 @@
-<!-- 会話ブロック -->
-<section class="chat-log">
-  <!-- あなた（右） -->
-  <div class="chat-msg right">
-    <div>
-      <div class="chat-name">あなた</div>
-      <div class="chat-bubble">
-        さっきの店員さん「ペンを魔法の道具にしてから使ってね」て言ってたね
-      </div>
-    </div>
-    <img class="chat-avatar" src="../images/anata.png" alt="あなた">
-  </div>
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>st1｜会話</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <!-- 既存の共通CSS（ある場合） -->
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* ==== 最低限の会話レイアウト（このページだけで完結） ==== */
+    body{font-family:'Noto Sans JP',sans-serif}
+    .chat-wrap{max-width:880px;margin:24px auto;padding:0 16px}
+    .chat-log{display:flex;flex-direction:column;gap:16px}
+    .chat-msg{display:grid;grid-template-columns:56px 1fr;align-items:flex-start;gap:12px}
+    .chat-msg.right{grid-template-columns:1fr 56px}
+    .chat-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;border:3px solid #bfe6ff}
+    .chat-name{font-size:.86rem;color:#445;margin:2px 0 4px}
+    .chat-bubble{
+      position:relative; background:#FFDCE0; /* 左=ピンク */
+      border-radius:12px; padding:10px 14px; line-height:1.9; box-shadow:0 2px 8px rgba(0,0,0,.06)
+    }
+    .chat-bubble:after{
+      content:""; position:absolute; top:14px; left:-8px; border:8px solid transparent; border-right-color:#FFDCE0
+    }
+    .chat-msg.right .chat-bubble{background:#DFF1FF} /* 右=水色 */
+    .chat-msg.right .chat-bubble:after{left:auto; right:-8px; border-right-color:transparent; border-left-color:#DFF1FF}
 
-  <!-- 猫（左） -->
-  <div class="chat-msg">
-    <img class="chat-avatar" src="../images/neko.png" alt="猫">
-    <div>
-      <div class="chat-name">猫</div>
-      <div class="chat-bubble">
-        店員さんから貰ったカードとこのペンからは同じ魔力を感じるにゃ
-      </div>
-    </div>
-  </div>
+    /* NEXT コールアウト */
+    .next-callout{position:relative;margin:20px 0;background:#fff;border-top:3px solid #bfe6ff;border-radius:8px;
+      box-shadow:0 2px 8px rgba(0,0,0,.06);padding:14px 16px}
+    .next-badge{position:absolute;top:-12px;left:12px;background:#d0ecff;color:#0b5a7a;font-weight:700;font-size:.8rem;
+      padding:4px 10px;border-radius:6px}
+    .next-callout p{margin:6px 0 0;font-size:.95rem}
+  </style>
+</head>
+<body>
+  <main class="chat-wrap">
 
-  <!-- あなた（右） -->
-  <div class="chat-msg right">
-    <div>
-      <div class="chat-name">あなた</div>
-      <div class="chat-bubble">
-        セットで使うってことなのかな
+    <section class="chat-log">
+      <!-- あなた（右） -->
+      <div class="chat-msg right">
+        <div>
+          <div class="chat-name">あなた</div>
+          <div class="chat-bubble">
+            さっきの店員さん「ペンを魔法の道具にしてから使ってね」て言ってたね
+          </div>
+        </div>
+        <img class="chat-avatar" src="../images/anata.png" alt="あなた">
       </div>
-    </div>
-    <img class="chat-avatar" src="../images/anata.png" alt="あなた">
-  </div>
-</section>
 
-<!-- NEXT ボックス -->
-<div class="next-callout">
-  <span class="next-badge">NEXT</span>
-  <p>Ｑ１へ進んでください</p>
-</div>
+      <!-- 猫（左） -->
+      <div class="chat-msg">
+        <img class="chat-avatar" src="../images/neko.png" alt="謎の白猫">
+        <div>
+          <div class="chat-name">謎の白猫</div>
+          <div class="chat-bubble">
+            店員さんから貰ったカードとこのペンからは同じ魔力を感じるにゃ
+          </div>
+        </div>
+      </div>
+
+      <!-- あなた（右） -->
+      <div class="chat-msg right">
+        <div>
+          <div class="chat-name">あなた</div>
+          <div class="chat-bubble">
+            セットで使うってことなのかな
+          </div>
+        </div>
+        <img class="chat-avatar" src="../images/anata.png" alt="あなた">
+      </div>
+    </section>
+
+    <!-- NEXT -->
+    <div class="next-callout">
+      <span class="next-badge">NEXT</span>
+      <p>Ｑ１へ進んでください</p>
+    </div>
+
+  </main>
+</body>
+</html>
