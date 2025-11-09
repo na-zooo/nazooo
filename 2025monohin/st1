@@ -1,0 +1,41 @@
+<!-- 会話ブロック -->
+<section class="chat-log">
+  <!-- あなた（右） -->
+  <div class="chat-msg right">
+    <div>
+      <div class="chat-name">あなた</div>
+      <div class="chat-bubble">
+        さっきの店員さん「ペンを魔法の道具にしてから使ってね」て言ってたね
+      </div>
+    </div>
+    <img class="chat-avatar" src="../images/anata.png" alt="あなた">
+  </div>
+
+  <!-- 猫（左） -->
+  <div class="chat-msg">
+    <img class="chat-avatar" src="../images/neko.png" alt="猫">
+    <div>
+      <div class="chat-name">猫</div>
+      <div class="chat-bubble">
+        店員さんから貰ったカードとこのペンからは同じ魔力を感じるにゃ
+      </div>
+    </div>
+  </div>
+
+  <!-- あなた（右） -->
+  <div class="chat-msg right">
+    <div>
+      <div class="chat-name">あなた</div>
+      <div class="chat-bubble">
+        セットで使うってことなのかな
+      </div>
+    </div>
+    <img class="chat-avatar" src="../images/anata.png" alt="あなた">
+  </div>
+</section>
+
+<!-- NEXT ボックス -->
+<div class="next-callout">
+  <span class="next-badge">NEXT</span>
+  <p>Ｑ１へ進んでください</p>
+</div>
