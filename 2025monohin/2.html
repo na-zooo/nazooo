@@ -1,56 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>nazooo | Story 2</title>
-  <!-- トップページと同じCSSを想定 -->
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nazooo｜2ページ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W4N8RQXC1Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W4N8RQXC1Q');
+</script>
+
 <body>
-  <!-- ヘッダー：トップと同じ構成を想定 -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="site-logo">
-        <a href="index.html">nazooo</a>
-      </div>
-      <nav class="site-nav">
-        <ul>
-          <li><a href="index.html">TOP</a></li>
-          <li><a href="1.html">Story 1</a></li>
-          <li><a href="2.html" class="is-active">Story 2</a></li>
-          <!-- 必要に応じて他のリンクを追加 -->
-        </ul>
-      </nav>
-    </div>
+  <!-- ヘッダー：indexと同じ -->
+  <header>
+    <h1><a href="index.html" class="title-link">nazooo</a></h1>
+    <p>なぞ、する？</p>
   </header>
 
-  <!-- メインコンテンツ -->
-  <main class="main-content">
-    <section class="story-section">
-      <div class="story-inner">
-        <!-- 見出しはお好みで -->
-        <h1 class="story-title">白ねこと魔法道具の謎</h1>
+  <!-- 本文だけのシンプルなセクション -->
+  <section>
+    <p>本にはこう書かれていた。</p>
+    <p>“すぐ魔法が使えるわけではありません。まずは魔法道具を作りましょう。”</p>
+    <p>しかし、肝心の「何を作るか」の部分がごっそり抜け落ちている。</p>
+    <p>「え……これ、謎解きじゃない？」<br>
+       あなたがつぶやくと、白ねこは途端にむーっとした顔になる。</p>
+    <p>道具の正体を知るには、どうやら謎を解くしかなさそうだ。</p>
+  </section>
 
-        <p>本にはこう書かれていた。</p>
-
-        <p>“すぐ魔法が使えるわけではありません。まずは魔法道具を作りましょう。”</p>
-
-        <p>しかし、肝心の「何を作るか」の部分がごっそり抜け落ちている。</p>
-
-        <p>「え……これ、謎解きじゃない？」<br>
-        あなたがつぶやくと、白ねこは途端にむーっとした顔になる。</p>
-
-        <p>道具の正体を知るには、どうやら謎を解くしかなさそうだ。</p>
-      </div>
-    </section>
-  </main>
-
-  <!-- フッター：トップと同じ構成を想定 -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p class="footer-copy">&copy; 2025 nazooo</p>
-    </div>
+  <!-- フッター：indexと同じ -->
+  <footer>
+    <a href="index.html"><i class="fas fa-home"></i><span>ホーム</span></a>
+    <a href="products.html"><i class="fas fa-box-open"></i><span>商品一覧</span></a>
+    <a href="https://x.com/nazooo2024"><i class="fab fa-x-twitter"></i><span>X</span></a>
+    <a href="https://www.instagram.com/nazooo_2024"><i class="fab fa-instagram"></i><span>Instagram</span></a>
   </footer>
 </body>
 </html>
