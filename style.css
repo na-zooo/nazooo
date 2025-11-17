@@ -307,23 +307,29 @@ footer i {
   position: relative;
   padding: 15px 20px 15px 50px;
   background: #f8f5e9;
-  border-left: 4px solid #c9b88a; /* 魔法書の金具っぽい色 */
+  border-left: 4px solid #c9b88a;
   border-radius: 6px;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #4e4639; /* 茶寄りで読みやすい */
+  color: #4e4639;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* アイコン */
 .quote-box::before {
-  content: "\f02d"; /* 本アイコン */
+  content: "\f02d";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   position: absolute;
   left: 15px;
   top: 15px;
   font-size: 20px;
-  color: #c9b88a; /* 見出しの金色 */
+  color: #c9b88a;
   opacity: 0.95;
 }
 
+/* ← 本文だけ黒太字にする */
+.quote-box {
+  font-weight: 700;
+  color: #000;
+}
