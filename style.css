@@ -278,61 +278,60 @@ a:not(.title-link) {
 
 
 /* ====== 会話風（nazooo専用） ====== */
+/* ====== 会話全体 ====== */
 .chat-log {
-  max-width: 880px;
-  margin: 32px auto;
-  padding: 0 16px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
+  margin: 16px 0;
 }
+
+/* ====== メッセージ枠（左右共通） ====== */
 .chat-msg {
   display: grid;
   grid-template-columns: 48px 1fr;
   align-items: flex-start;
   gap: 10px;
 }
+
+/* 右配置 */
 .chat-msg.right {
   grid-template-columns: 1fr 48px;
 }
-.chat-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+/* ====== アイコン ====== */
+.chat-avatar{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid #bfe6ff;
 }
-.chat-name {
-  font-size: 0.8rem;
-  color: #666;
-  opacity: 0.9;
-  margin-bottom: 4px;
+
+/* ====== 名前 ====== */
+.chat-name{
+  font-size:.8rem;
+  color:#666;
+  margin-bottom:4px;
 }
-.chat-bubble {
-  position: relative;
-  background: #ffdce0; /* ピンク（#FFDCE0） */
-  border-radius: 12px;
-  padding: 10px 14px;
-  line-height: 1.9;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+/* ====== 吹き出し本体 ====== */
+.chat-bubble{
+  position:relative;
+  border-radius:12px;
+  padding:10px 14px;
+  line-height:1.9;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
 }
-.chat-msg.right .chat-bubble {
-  background: #dff1ff; /* 水色 */
+
+/* 左：ピンク */
+.chat-msg.left .chat-bubble{
+  background:#FFDCE0;
 }
-.chat-bubble:after {
-  content: "";
-  position: absolute;
-  top: 14px;
-  left: -8px;
-  border: 8px solid transparent;
-  border-right-color: #ffdce0;
-}
-.chat-msg.right .chat-bubble:after {
-  left: auto;
-  right: -8px;
-  border-right-color: transparent;
-  border-left-color: #dff1ff;
-}
+
+/* 右：水色 */
+.chat-msg.right .chat-bu
+
 
 
 /* ===== NEXT（画像みたいなラベル付ボックス） ===== */
