@@ -3,6 +3,22 @@ body {
   margin: 0;
   background: #fafafa;
   color: #333;
+  padding-bottom: 90px;  /* ← 固定フッターぶん余白を確保 */
+}
+
+/* 物語ページ共通レイアウト */
+.story-wrap{
+  max-width: 880px;
+  margin: 24px auto 40px;
+  padding: 0 16px;
+  line-height: 1.9;
+}
+.story-wrap p{
+  margin: 0 0 1em;
+}
+.story-wrap .story-quote{
+  font-weight: 700;
+  margin-left: 1em;
 }
 
 section {
