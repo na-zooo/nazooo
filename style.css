@@ -452,24 +452,3 @@ a:not(.title-link) {
 }
 /* === nazooo 会話 修正オーバーライドここまで === */
 
-
-/* === ページ全体の左右余白を確保（index と同じ雰囲気） === */
-body {
-  margin: 0;
-  padding: 16px;              /* スマホ向け余白 */
-  box-sizing: border-box;
-  background-color: #ffffff;
-}
-
-/* コンテンツ最大幅（PC の読みやすさ確保） */
-.main-wrapper {
-  max-width: 860px;           /* index の印象に合わせた幅 */
-  margin: 0 auto;             /* 中央寄せ */
-}
-
-/* 画像がはみ出さないように */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
