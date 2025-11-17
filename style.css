@@ -1,13 +1,12 @@
-/* ======================
-   ベース設定
-====================== */
-
+/* =======================================
+   共通設定
+======================================= */
 body {
   font-family: 'Noto Sans JP', sans-serif;
   margin: 0;
-  background: #fafafa;    /* ほんのりグレー */
+  background: #fafafa;
   color: #333;
-  padding-bottom: 90px;   /* 固定フッターに隠れないための余白 */
+  padding-bottom: 90px; /* フッター分の余白 */
 }
 
 a.title-link {
@@ -15,16 +14,14 @@ a.title-link {
   color: inherit;
 }
 
-/* 通常リンク（タイトル以外） */
 a:not(.title-link) {
   text-decoration: underline;
   color: #007acc;
 }
 
-/* ======================
+/* =======================================
    ヘッダー
-====================== */
-
+======================================= */
 header {
   background: linear-gradient(to right, #89f7fe, #66a6ff);
   color: white;
@@ -42,15 +39,15 @@ header p {
   font-size: 1.1em;
 }
 
-/* ======================
-   共通セクションレイアウト
-====================== */
-
+/* =======================================
+   セクション（トップページ用カード）
+   ※ 会話ページでは使わない
+======================================= */
 section {
   max-width: 960px;
   margin: 2em auto;
   padding: 1.5em;
-  background: #ffffff;
+  background: white;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -60,7 +57,6 @@ section p {
   font-size: 0.95em;
 }
 
-/* セクション見出し（NEWS / NEW PRODUCTS など） */
 h2.section-title {
   text-align: center;
   margin: 0 auto 1.5em;
@@ -74,36 +70,15 @@ h2.section-title {
   box-sizing: border-box;
 }
 
-/* NEWS内の目立たせボックス */
-.news-box {
-  background: #fff5f5;
-  padding: 1.5em;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 0.95em;
-}
-
-/* ピンクボックス（お知らせ用） */
-.pink-box {
-  background-color: #ffeeee;
-  padding: 1.5em;
-  margin: 1em auto;
-  border-radius: 10px;
-  max-width: 600px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* ======================
-   商品カード（NEW PRODUCTS）
-====================== */
-
+/* =======================================
+   PRODUCTS（index と products.html 用）
+======================================= */
 .products-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5em;
   margin-top: 1em;
 }
-
 @media (min-width: 600px) {
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -134,11 +109,6 @@ h2.section-title {
   padding: 0 1em 1em;
 }
 
-.product-content h3 {
-  margin: 0.4em 0;
-}
-
-/* 価格タグ */
 .price-tag {
   position: absolute;
   top: 8px;
@@ -151,27 +121,9 @@ h2.section-title {
   border-radius: 10px;
 }
 
-/* SOLD OUT リボン */
-.soldout-ribbon {
-  position: absolute;
-  top: 12px;
-  right: -95px;
-  background: #e74c3c;
-  color: white;
-  text-align: center;
-  transform: rotate(45deg);
-  font-size: 2em;
-  font-weight: bold;
-  padding: 14px 100px;
-  line-height: 1.2;
-  white-space: nowrap;
-  z-index: 10;
-}
-
-/* ======================
-   SNSブロック
-====================== */
-
+/* =======================================
+   SNS
+======================================= */
 .sns-links {
   display: flex;
   flex-wrap: wrap;
@@ -195,10 +147,9 @@ h2.section-title {
   font-size: 1.35em;
 }
 
-/* ======================
-   フッター（固定）
-====================== */
-
+/* =======================================
+   フッター
+======================================= */
 footer {
   position: fixed;
   bottom: 0;
@@ -228,113 +179,103 @@ footer i {
   margin-bottom: 0.2em;
 }
 
-/* ======================
-   物語ページ用（story-wrap）
-====================== */
+/* =======================================
+      nazooo 会話レイアウト（完全版）
+   ======================================= */
 
-.story-wrap{
+/* 会話全体（白い四角枠を完全に無効化） */
+.chat-log{
   max-width: 880px;
-  margin: 24px auto 40px;
+  margin: 24px auto;
   padding: 0 16px;
-  line-height: 1.9;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  background: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  border: none !important;
 }
 
-.story-wrap p{
-  margin: 0 0 1em;
+/* 1行ぶん（余計な白背景を消す） */
+.chat-msg{
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
-.story-wrap .story-quote{
-  font-weight: 700;
-  margin-left: 1em;
+/* アイコン（左固定） */
+.chat-avatar{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-/* ======================
-   HINT ページ用
-====================== */
-
-/* タイトル帯 「秋の謎ヒントページ」など */
-.hint-header{
-  background:#d0f0ff;
-  border-radius:8px;
-  text-align:center;
-  padding:14px 0;
-  margin:24px auto;
-  max-width:880px;
-  font-size:1.25rem;
-  font-weight:700;
-  color:#333;
+/* 名前（アイコンの真下） */
+.chat-name{
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 4px;
+  text-align: center;
 }
 
-/* 全体ラップ */
-.hint-wrap{
-  max-width:880px;
-  margin:0 auto 60px;
-  padding:0 16px;
+/* 名前＋アイコン縦配置 */
+.chat-iconblock{
+  width: 70px;
+  text-align: center;
+  flex-shrink: 0;
 }
 
-/* 各ヒントボックス */
-.hint-card{
-  background:#fff;
-  border-radius:12px;
-  box-shadow:0 4px 12px rgba(0,0,0,.05);
-  padding:18px 20px;
-  margin:20px auto;
-  width:100%;
-  box-sizing:border-box;
-}
-
-/* 見出し：水色の太め下線だけ（背景塗りつぶしなし） */
-.hint-title {
+/* 吹き出し（背景透過・枠だけ色つける） */
+.chat-bubble{
   position: relative;
-  display: inline-block;
-  font-weight: 700;
-  font-size: 1.05rem;
-  padding-bottom: 6px;
-  margin-bottom: 14px;
+  max-width: calc(100% - 90px);
+  padding: 10px 16px;
+  border-radius: 16px;
+  border: 2px solid;
+  background: transparent;   /* ← 透明 */
+  line-height: 1.8;
+  word-break: break-word;
 }
 
-.hint-title::after {
+/* あなた（青） */
+.chat-msg.chat-you .chat-bubble{
+  border-color: #d0ecff;
+}
+
+/* ねこ（ピンク） */
+.chat-msg.chat-neko .chat-bubble{
+  border-color: #ffd6e5;
+}
+
+/* 吹き出しの三角（左側） */
+.chat-bubble::before{
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 6px;
-  background: #d0ecff;   /* indexと同じ水色 */
-  border-radius: 4px;
+  left: -12px;
+  top: 18px;
+  border: 10px solid transparent;
 }
 
-/* 本文 */
-.hint-body{
-  font-size:.95rem;
-  line-height:1.9;
-  letter-spacing:.01em;
-  margin:.3rem 0;
+.chat-msg.chat-you .chat-bubble::before{
+  border-right-color: #d0ecff;
 }
 
-.hint-body img{
-  max-width:100%;
-  height:auto;
-  border-radius:8px;
+.chat-msg.chat-neko .chat-bubble::before{
+  border-right-color: #ffd6e5;
 }
 
-/* 折りたたみ（ヒント/答え・解説） */
-.hint-details summary{
-  cursor:pointer;
-  font-weight:400;      /* 本文と同じ太さに */
-  font-size:.95rem;
-  line-height:1.9;
-}
-
-.hint-details[open] > .hint-explain{
-  margin-top:.6rem;
-  line-height:1.9;
-}
-
-/* ======================
+/* =======================================
    NEXT ボックス
-====================== */
-
+======================================= */
 .next-callout{
   position:relative;
   margin:20px auto;
@@ -345,11 +286,9 @@ footer i {
   box-shadow:0 2px 8px rgba(0,0,0,.06);
   padding:14px 16px 16px;
 }
-
 .next-callout .next-badge{
   position:absolute;
-  top:-12px;
-  left:12px;
+  top:-12px; left:12px;
   background:#d0ecff;
   color:#0b5a7a;
   font-weight:700;
@@ -357,102 +296,4 @@ footer i {
   padding:4px 10px;
   border-radius:6px;
 }
-
-.next-callout p{
-  margin:6px 0 0;
-  font-size:.95rem;
-}
-
-/* ======================
-   会話（あなた／白ねこ）吹き出し
-   - アイコン＋名前：左
-   - セリフ：右
-   - 背景はサイトと同じ（透明）
-   - 枠だけ水色／ピンク
-====================== */
-
-/* 会話ブロック全体（縦に並ぶ） */
-.chat-log{
-  max-width:880px;
-  margin:24px auto;
-  padding:0 16px;
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-}
-
-/* 1つのセリフ行 */
-.chat-msg{
-  display:flex;
-  align-items:flex-start;
-  gap:14px;
-  margin:0;
-  background:none;
-  box-shadow:none;
-  border:none;
-  padding:0;
-}
-
-/* アイコン＋名前（左側） */
-.chat-avatar-wrap{
-  width:70px;
-  flex-shrink:0;
-  text-align:center;
-}
-
-.chat-avatar{
-  width:55px;
-  height:55px;
-  border-radius:50%;
-  object-fit:cover;
-  display:block;
-  margin:0 auto;
-}
-
-/* アイコンの下の「あなた」「白ねこ」 */
-.chat-name{
-  font-size:0.8rem;
-  color:#555;
-  margin-top:4px;
-}
-
-/* 吹き出し本体：背景は透明、枠だけ色 */
-.chat-bubble{
-  position:relative;
-  max-width:calc(100% - 90px);
-  padding:12px 18px;
-  border-radius:16px;
-  border:2px solid;
-  background:transparent;    /* ← サイト背景と馴染む */
-  line-height:1.8;
-  word-break:break-word;
-}
-
-/* あなた：水色の枠線 */
-.chat-msg.chat-you .chat-bubble{
-  border-color:#d0ecff;
-}
-
-/* 白ねこ：ピンクの枠線 */
-.chat-msg.chat-neko .chat-bubble{
-  border-color:#ffd6e5;
-}
-
-/* しっぽ（三角）：枠線の色だけ出す */
-.chat-bubble::before{
-  content:"";
-  position:absolute;
-  left:-10px;
-  top:18px;
-  border:10px solid transparent;  /* ベースは透明 */
-}
-
-/* あなた（水色）のしっぽ */
-.chat-msg.chat-you .chat-bubble::before{
-  border-right-color:#d0ecff;
-}
-
-/* 白ねこ（ピンク）のしっぽ */
-.chat-msg.chat-neko .chat-bubble::before{
-  border-right-color:#ffd6e5;
-}
+.next-callout p{ margin:6px 0 0; font-size:.95rem; }
