@@ -385,3 +385,69 @@ a:not(.title-link) {
 .chat-bubble:after{content:"";position:absolute;top:14px;left:-8px;border:8px solid transparent;border-right-color:#FFDCE0}
 .chat-msg.right .chat-bubble{background:#DFF1FF}
 .chat-msg.right .chat-bubble:after{left:auto;right:-8px;border-right-color:transparent;border-left-color:#DFF1FF}
+
+
+/* === nazooo 会話 修正オーバーライドここから === */
+
+/* 余計なカード背景を消す */
+.chat-log{
+  margin: 8px 0 4px;
+}
+.chat-msg{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  /* 以前つけた背景・影などを無効化 */
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* アイコンは左、吹き出しは右側 */
+.chat-avatar{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chat-name{
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+/* 吹き出し本体：背景は白（共通） */
+.chat-bubble{
+  position: relative;
+  margin-top: 2px;
+  padding: 10px 16px;
+  line-height: 1.9;
+  background: #ffffff;          /* ← 背景色なし＝白 */
+  border-radius: 16px;
+  border: 2px solid transparent;/* 色は下で個別指定 */
+}
+
+/* あなた：水色のふち */
+.chat-msg.chat-you .chat-bubble{
+  border-color: #d0ecff;
+}
+
+/* 白ねこ：ピンクのふち */
+.chat-msg.chat-neko .chat-bubble{
+  border-color: #ffd6e2;
+}
+
+/* しっぽも白背景前提で細く */
+.chat-bubble::after{
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent #ffffff transparent transparent;
+}
+/* === nazooo 会話 修正オーバーライドここまで === */
