@@ -294,61 +294,74 @@ a:not(.title-link) {
 
 
 /* ====== 会話風（nazooo専用） ====== */
-/* ====== 会話風（nazooo専用） ====== */
-
-/* 全体 */
-.chat-log{
-  margin: 10px 0 6px;
-}
-
-/* 1メッセージの横並び */
-.chat-msg{
+/* 1行ぶん（変な白い箱は使わない） */
+.chat-row{
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px;
+  margin: 16px 0;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
 }
 
-/* アイコン */
-.chat-avatar{
-  width: 48px;
-  height: 48px;
+/* アイコン＋名前を縦に並べるブロック（左） */
+.chat-icon-block{
+  width: 72px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* アイコン画像 */
+.chat-icon{
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
-/* 名前 */
-.chat-name{
+/* アイコンの下の「あなた」「白ねこ」 */
+.chat-label{
   font-size: 0.8rem;
-  color: #666;
-  margin-bottom: 4px;
+  color: #555;
+  margin-top: 4px;
 }
 
-/* 吹き出し本体：背景は白（＝色なし） */
+/* 吹き出し本体（背景は白。ここにだけ枠を付ける） */
 .chat-bubble{
   position: relative;
-  background: #ffffff;
-  border-radius: 16px;
+  max-width: calc(100% - 90px);
   padding: 10px 16px;
-  line-height: 1.9;
-  border: 2px solid #add9ff;    /* デフォルトは水色枠（あなた） */
+  border-radius: 16px;
+  background: #ffffff;          /* ← 背景白＝色なし */
+  border: 2px solid #d0ecff;    /* デフォルトは水色 */
+  line-height: 1.8;
+  word-break: break-word;
 }
 
-/* 白ねこだけピンク枠に */
-.chat-msg.chat-neko .chat-bubble{
-  border-color: #ffc8d5;
+/* あなた＝水色の枠 */
+.chat-bubble-you{
+  border-color: #d0ecff;
 }
 
-/* 吹き出しのしっぽ：左側に白い三角形 */
-.chat-bubble::after{
+/* 白ねこ＝ピンクの枠 */
+.chat-bubble-neko{
+  border-color: #ffd6e5;
+}
+
+/* 吹き出しのしっぽ（左側・白い三角だけ） */
+.chat-bubble::before{
   content: "";
   position: absolute;
-  top: 16px;
   left: -8px;
+  top: 16px;
   border-width: 8px;
   border-style: solid;
   border-color: transparent #ffffff transparent transparent;
 }
-
 
 
 
