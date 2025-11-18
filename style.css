@@ -447,3 +447,42 @@ footer i {
 .chat-msg.chat-neko .chat-bubble::before{
   border-right-color: #ffe2eb;
 }
+
+
+
+.box-009 {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 2px solid #b000bd;
+    border-radius: 5px;
+    color: #333333;
+}
+
+.box-009 div {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 4px;
+    position: relative;
+    top: -13px;
+    left: 10px;
+    margin: 0 7px;
+    padding: 0 8px;
+    background: #fff;
+    color: #b000bd;
+    font-weight: 600;
+    vertical-align: top;
+}
+
+.box-009 div::before {
+    width: 15px;
+    height: 7.5px;
+    border-bottom: 3px solid #b000bd;
+    border-left: 3px solid #b000bd;
+    transform: rotate(-45deg) translate(2px, -2px);
+    content: '';
+}
+
+.box-009 p {
+    margin: 0;
+    padding: 0 1.5em 1em;
+}
