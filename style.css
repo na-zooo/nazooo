@@ -486,3 +486,11 @@ footer i {
     margin: 0;
     padding: 0 1.5em 1em;
 }
+
+
+
+.hint-title {
+  display: inline-block;
+  background: linear-gradient(transparent 60%, #d0f0ff 60%);
+  padding: 0 4px;
+}
