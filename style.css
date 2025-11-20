@@ -492,5 +492,10 @@ footer i {
 .hint-title {
   display: inline-block;
   background: linear-gradient(transparent 60%, #d0f0ff 60%);
+
+
+   .hint-details > summary {
+  font-weight: 700;  /* または bold */
+}
   padding: 0 4px;
 }
