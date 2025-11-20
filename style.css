@@ -497,5 +497,14 @@ footer i {
    .hint-details > summary {
   font-weight: 700;  /* または bold */
 }
+
+
+   .hint-title .marker {
+  background: #d0efff;       /* マーカー色（水色） */
+  display: inline-block;     /* ←ここが重要！幅が伸びる */
+  padding: 2px 6px;          /* 上下左右の余白 */
+  border-radius: 3px;        /* マーカーを少し丸く */
+}
+
   padding: 0 4px;
 }
